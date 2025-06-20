@@ -1,11 +1,11 @@
 
 import Link from 'next/link';
-import { Film, Users, Camera, Brain } from 'lucide-react'; // Changed VideoCamera to Camera
+import { Film, Users, Camera } from 'lucide-react'; // Removed Brain
 import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
 import SectionTitle from '@/components/custom/SectionTitle';
-import { Button } from '@/components/ui/button';
+// Removed Button import as it's no longer used for AI suggestions link here
 
 export default function Home() {
   const projects = [
@@ -37,7 +37,7 @@ export default function Home() {
 
   const equipment = [
     {
-      icon: <Camera />, // Changed VideoCamera to Camera
+      icon: <Camera />,
       description: 'Equipamentos de Ponta para Produções Incríveis.',
       imageUrl: 'https://placehold.co/600x400.png',
       imageAlt: 'Câmera de vídeo profissional em um tripé',
@@ -51,12 +51,7 @@ export default function Home() {
         <aside className="w-full md:sticky md:top-12 flex flex-col items-center md:items-start">
           <LogoBox />
           <ContactInfo className="my-8" />
-          <Button asChild className="w-full md:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="/ai-suggestions">
-              <Brain className="mr-2 h-5 w-5" />
-              Sugestões com IA
-            </Link>
-          </Button>
+          {/* AI Suggestions Button Removed */}
         </aside>
 
         <main className="flex flex-col gap-12 md:gap-16 items-center md:items-stretch">
