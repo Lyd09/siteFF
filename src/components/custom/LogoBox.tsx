@@ -11,7 +11,7 @@ const LogoBox: React.FC<LogoBoxProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        'relative w-full max-w-[220px] h-72 bg-black rounded-2xl shadow-xl p-4 overflow-hidden cursor-default select-none',
+        'relative w-full max-w-[220px] h-72 bg-black rounded-2xl p-4 cursor-default select-none',
         className
       )}
       aria-label="Logotipo FastFilms"
@@ -20,7 +20,7 @@ const LogoBox: React.FC<LogoBoxProps> = ({ className }) => {
         src="/logoFF.svg"
         alt="FastFilms Logo"
         fill
-        className="object-contain"
+        className="object-contain [filter:drop-shadow(0_4px_3px_rgba(0,0,0,0.4))]"
         data-ai-hint="company logo"
       />
     </div>
