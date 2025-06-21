@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,6 +7,17 @@ import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
 import SectionTitle from '@/components/custom/SectionTitle';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 export default function Home() {
   const projects = [
@@ -48,12 +60,31 @@ export default function Home() {
           <ContactInfo />
         </div>
         
-        <Link href="https://gestao-de-clientes-ff.netlify.app/" target="_blank" rel="noopener noreferrer" className="learn-more-button">
-          <span className="circle" aria-hidden="true">
-            <span className="icon user-lock-icon"></span>
-          </span>
-          <span className="button-text">Só pra quem joga junto</span>
-        </Link>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <button className="learn-more-button">
+              <span className="circle" aria-hidden="true">
+                <span className="icon user-lock-icon"></span>
+              </span>
+              <span className="button-text">Só pra quem joga junto</span>
+            </button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Acesso Restrito</AlertDialogTitle>
+              <AlertDialogDescription>
+                Esta área é exclusiva para os parceiros e colaboradores da FastFilms. Se você faz parte da nossa equipe, clique em 'Continuar' para acessar.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancelar</AlertDialogCancel>
+              <AlertDialogAction onClick={() => window.open('https://gestao-de-clientes-ff.netlify.app/', '_blank', 'noopener,noreferrer')}>
+                Continuar
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+
       </aside>
 
       <main className="flex flex-col gap-12 md:gap-16 items-center md:items-stretch">
