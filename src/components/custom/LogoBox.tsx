@@ -11,7 +11,7 @@ const LogoBox: React.FC<LogoBoxProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        'relative w-full max-w-[220px] aspect-square bg-primary rounded-2xl shadow-xl p-4 overflow-hidden cursor-default select-none',
+        'relative w-full max-w-[220px] h-72 bg-primary rounded-2xl shadow-xl p-4 overflow-hidden cursor-default select-none',
         className
       )}
       aria-label="Logotipo FastFilms"
