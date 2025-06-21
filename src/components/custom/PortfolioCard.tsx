@@ -29,7 +29,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
       <div className="text-sm flex-grow basis-[40%] max-w-[40%] md:basis-[45%] md:max-w-[45%] text-card-foreground">
         {typeof description === 'string' ? <span className="font-body">{description}</span> : description}
       </div>
-      <div className="relative flex-grow basis-[calc(60%-1rem)] max-w-[calc(60%-1rem)] md:basis-[calc(55%-1rem)] md:max-w-[calc(55%-1rem)] h-20 md:h-[80px] rounded-lg overflow-hidden shadow-md">
+      <div className="relative flex-grow basis-[calc(60%-1rem)] max-w-[calc(60%-1rem)] md:basis-[calc(55%-1rem)] md:max-w-[calc(55%-1rem)] h-32 rounded-lg overflow-hidden shadow-md">
         <NextImage // Use the renamed import
           src={imageUrl}
           alt={imageAlt}
