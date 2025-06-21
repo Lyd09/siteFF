@@ -177,7 +177,7 @@
 .socialContainer {
   width: 52px;
   height: 52px;
-  background-color: rgb(44, 44, 44);
+  background-color: hsl(var(--primary));
   display: flex;
   align-items: center;
   justify-content: center;
