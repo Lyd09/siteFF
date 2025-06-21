@@ -1,6 +1,7 @@
 
+import Image from 'next/image';
 import Link from 'next/link';
-import { Film, Play, Users, Video } from 'lucide-react';
+import { Users, Video } from 'lucide-react';
 import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
@@ -10,10 +11,7 @@ export default function Home() {
   const projects = [
     {
       icon: (
-        <span className="relative">
-          <Film />
-          <Play className="absolute top-1/2 left-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 fill-current" />
-        </span>
+        <Image src="/filmPLAY.svg" alt="Ícone de filme com play" width={32} height={32} />
       ),
       description: <>Portfólio feito com alma e café forte <span aria-label="xícara de café">☕</span></>,
       imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Primary/Background
