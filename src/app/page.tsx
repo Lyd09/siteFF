@@ -12,14 +12,14 @@ export default function Home() {
     {
       icon: <Film />,
       description: <>Portfólio feito com alma e café forte <span aria-label="Emoji pensativo">🤔</span></>,
-      imageUrl: 'https://placehold.co/300x200/663399/F2F0F5.png', // Primary/Background
+      imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Primary/Background
       imageAlt: 'Ícone pasta de arquivos estilizada',
       dataAiHint: 'creative portfolio',
     },
     {
       icon: <Film />,
       description: 'Curtas metragens premiados internacionalmente.',
-      imageUrl: 'https://placehold.co/300x200/993399/F2F0F5.png', // Accent/Background
+      imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Accent/Background
       imageAlt: 'Cena de filme abstrata',
       dataAiHint: 'film scene',
     },
@@ -65,7 +65,7 @@ export default function Home() {
           </section>
 
           <section aria-labelledby="client-title" className="w-full max-w-2xl mx-auto md:mx-0">
-            <SectionTitle id="client-title">Nossos Clientes</SectionTitle>
+            <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
             <div className="space-y-6">
               {clients.map((item, index) => (
                 <PortfolioCard key={`client-${index}`} {...item} />
@@ -74,7 +74,7 @@ export default function Home() {
           </section>
 
           <section aria-labelledby="equip-title" className="w-full max-w-2xl mx-auto md:mx-0">
-            <SectionTitle id="equip-title">Nossos Equipamentos</SectionTitle>
+            <SectionTitle id="equip-title">Os brinquedos de gente grande</SectionTitle>
             <div className="space-y-6">
               {equipment.map((item, index) => (
                 <PortfolioCard key={`equipment-${index}`} {...item} />
