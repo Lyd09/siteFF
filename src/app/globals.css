@@ -300,7 +300,7 @@
 
 .learn-more-button .circle .icon.user-lock-icon {
   left: 0.75rem;
-  background-color: black;
+  background-color: hsl(var(--primary-foreground));
   -webkit-mask-image: url('/lockUSER.svg');
   mask-image: url('/lockUSER.svg');
   -webkit-mask-size: contain;
