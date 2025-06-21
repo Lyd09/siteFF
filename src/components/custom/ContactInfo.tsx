@@ -48,14 +48,14 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ className }) => {
   return (
     <div className={cn('mt-8 w-full max-w-[220px]', className)} aria-label="Contato FastFilms">
       <ContactItem
-        iconSrc="/whatsapp.png"
+        iconSrc="/whatsapp.svg"
         iconAlt="WhatsApp Logo"
         text="Solicite o seu orçamento!"
         href="https://wa.me/yourphonenumber"
         dataAiHint="whatsapp logo"
       />
       <ContactItem
-        iconSrc="/instagram.png"
+        iconSrc="/instagram.svg"
         iconAlt="Instagram Logo"
         text="Já nos segue no Insta?"
         href="https://instagram.com/yourprofile"
