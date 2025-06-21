@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Camera, Drone, Lightbulb, Mic2, Film } from 'lucide-react';
+import { Camera, Bot, Lightbulb, Mic2, Film } from 'lucide-react';
 
 export const metadata = {
   title: 'Equipamentos | FastFilms',
@@ -10,7 +10,7 @@ export const metadata = {
 const equipmentList = [
   { title: 'Câmeras de Cinema', description: 'Utilizamos câmeras de ponta como RED e ARRI para garantir a máxima qualidade de imagem.', icon: <Camera className="h-10 w-10" /> },
   { title: 'Lentes Premium', description: 'Uma vasta seleção de lentes prime e zoom para criar a estética perfeita para cada cena.', icon: <Film className="h-10 w-10" /> },
-  { title: 'Drones Cinematográficos', description: 'Capturamos imagens aéreas de tirar o fôlego com drones equipados com câmeras 4K.', icon: <Drone className="h-10 w-10" /> },
+  { title: 'Drones Cinematográficos', description: 'Capturamos imagens aéreas de tirar o fôlego com drones equipados com câmeras 4K.', icon: <Bot className="h-10 w-10" /> },
   { title: 'Iluminação Profissional', description: 'Kits de iluminação completos para controlar cada detalhe da luz e da sombra.', icon: <Lightbulb className="h-10 w-10" /> },
   { title: 'Captação de Áudio', description: 'Microfones shotgun, lapelas e gravadores de alta fidelidade para um som cristalino.', icon: <Mic2 className="h-10 w-10" /> },
 ];
