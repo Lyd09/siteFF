@@ -1,11 +1,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Users, Video } from 'lucide-react';
+import { Users, Video, UserRoundCog } from 'lucide-react';
 import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
 import SectionTitle from '@/components/custom/SectionTitle';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const projects = [
@@ -41,13 +42,21 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 page-grid grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-start">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 page-grid grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-stretch">
       <aside className="w-full md:sticky md:top-12 flex flex-col items-center md:items-start">
         <LogoBox />
         <div className="contact-info-wrapper my-16 w-full">
           <ContactInfo />
         </div>
-        {/* AI Suggestions Button Removed */}
+        
+        <div className="mt-auto w-full pt-4">
+          <Button variant="destructive" className="w-full" asChild>
+            <Link href="#">
+              <UserRoundCog />
+              Só pra quem joga junto
+            </Link>
+          </Button>
+        </div>
       </aside>
 
       <main className="flex flex-col gap-12 md:gap-16 items-center md:items-stretch">
