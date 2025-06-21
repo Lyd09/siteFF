@@ -41,43 +41,43 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-      <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-start">
-        <aside className="w-full md:sticky md:top-12 flex flex-col items-center md:items-start">
-          <LogoBox />
-          <ContactInfo className="my-8" />
-          {/* AI Suggestions Button Removed */}
-        </aside>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 page-grid grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-start">
+      <aside className="w-full md:sticky md:top-12 flex flex-col items-center md:items-start">
+        <LogoBox />
+        <div className="contact-info-wrapper my-8 w-full">
+          <ContactInfo />
+        </div>
+        {/* AI Suggestions Button Removed */}
+      </aside>
 
-        <main className="flex flex-col gap-12 md:gap-16 items-center md:items-stretch">
-          <section aria-labelledby="proj-title" className="w-full max-w-2xl mx-auto md:mx-0">
-            <SectionTitle id="proj-title">Nossos Projetos</SectionTitle>
-            <div className="space-y-6">
-              {projects.map((item, index) => (
-                <PortfolioCard key={`project-${index}`} {...item} />
-              ))}
-            </div>
-          </section>
+      <main className="flex flex-col gap-12 md:gap-16 items-center md:items-stretch">
+        <section aria-labelledby="proj-title" className="w-full max-w-2xl mx-auto md:mx-0">
+          <SectionTitle id="proj-title">Nossos Projetos</SectionTitle>
+          <div className="space-y-6">
+            {projects.map((item, index) => (
+              <PortfolioCard key={`project-${index}`} {...item} />
+            ))}
+          </div>
+        </section>
 
-          <section aria-labelledby="client-title" className="w-full max-w-2xl mx-auto md:mx-0">
-            <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
-            <div className="space-y-6">
-              {clients.map((item, index) => (
-                <PortfolioCard key={`client-${index}`} {...item} />
-              ))}
-            </div>
-          </section>
+        <section aria-labelledby="client-title" className="w-full max-w-2xl mx-auto md:mx-0">
+          <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
+          <div className="space-y-6">
+            {clients.map((item, index) => (
+              <PortfolioCard key={`client-${index}`} {...item} />
+            ))}
+          </div>
+        </section>
 
-          <section aria-labelledby="equip-title" className="w-full max-w-2xl mx-auto md:mx-0">
-            <SectionTitle id="equip-title">Os brinquedos de gente grande</SectionTitle>
-            <div className="space-y-6">
-              {equipment.map((item, index) => (
-                <PortfolioCard key={`equipment-${index}`} {...item} />
-              ))}
-            </div>
-          </section>
-        </main>
-      </div>
+        <section aria-labelledby="equip-title" className="w-full max-w-2xl mx-auto md:mx-0">
+          <SectionTitle id="equip-title">Os brinquedos de gente grande</SectionTitle>
+          <div className="space-y-6">
+            {equipment.map((item, index) => (
+              <PortfolioCard key={`equipment-${index}`} {...item} />
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
