@@ -26,8 +26,8 @@ export default function Home() {
         <Image src="/filmPLAY.svg" alt="Ícone de filme com play" width={32} height={32} />
       ),
       description: <>Portfólio feito com alma e café forte <span aria-label="xícara de café">☕</span></>,
-      imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Primary/Background
-      imageAlt: 'Ícone pasta de arquivos estilizada',
+      imageUrl: '/PORTFOLIO.svg',
+      imageAlt: 'Ilustração do portfólio',
       dataAiHint: 'creative portfolio',
     },
   ];
@@ -36,8 +36,8 @@ export default function Home() {
     {
       icon: <Users />,
       description: 'Clientes',
-      imageUrl: 'https://placehold.co/600x400.png',
-      imageAlt: 'Pessoas em colaboração em um projeto',
+      imageUrl: '/CLIENTES.svg',
+      imageAlt: 'Ilustração de clientes',
       dataAiHint: 'team collaboration',
     },
   ];
@@ -46,8 +46,8 @@ export default function Home() {
     {
       icon: <Video />,
       description: 'Equipamentos',
-      imageUrl: 'https://placehold.co/600x400.png',
-      imageAlt: 'Câmera de vídeo profissional em um tripé',
+      imageUrl: '/EQUIPAMENTOS.svg',
+      imageAlt: 'Ilustração de equipamentos',
       dataAiHint: 'video camera',
     },
   ];
