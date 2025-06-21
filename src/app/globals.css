@@ -129,7 +129,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: hsl(var(--accent));
+  background-color: #ff0000;
   opacity: 1;
   filter: blur(18px);
   animation: blob-bounce 8s infinite ease;

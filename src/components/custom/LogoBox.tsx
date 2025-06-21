@@ -8,8 +8,8 @@ const LogoBox: React.FC = () => {
         <Image
           src="/logoFF.svg"
           alt="FastFilms Logo"
-          width={188}
-          height={256}
+          width={210}
+          height={278}
           className="object-contain"
           data-ai-hint="company logo"
         />
