@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -18,8 +19,8 @@ const ContactItem: React.FC<ContactItemProps> = ({ iconSrc, iconAlt, text, class
         <Image
           src={iconSrc}
           alt={iconAlt}
-          layout="fill"
-          objectFit="contain"
+          fill
+          className="object-contain"
           data-ai-hint={dataAiHint}
         />
       </div>

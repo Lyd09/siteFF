@@ -19,8 +19,8 @@ const LogoBox: React.FC<LogoBoxProps> = ({ className }) => {
       <Image
         src="/logoFF.svg"
         alt="FastFilms Logo"
-        layout="fill"
-        objectFit="contain"
+        fill
+        className="object-contain"
         data-ai-hint="company logo"
       />
     </div>

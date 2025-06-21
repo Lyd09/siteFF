@@ -1,3 +1,4 @@
+
 import NextImage from 'next/image'; // Renamed to avoid conflict with local Image component
 import React from 'react';
 import { Card } from '@/components/ui/card';
@@ -32,9 +33,8 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         <NextImage // Use the renamed import
           src={imageUrl}
           alt={imageAlt}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
+          fill
+          className="object-cover rounded-lg"
           data-ai-hint={dataAiHint}
         />
       </div>
