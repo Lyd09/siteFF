@@ -1,34 +1,26 @@
 
 import Link from 'next/link';
-import { Film, Users, Camera } from 'lucide-react'; // Removed Brain
+import { Film, Users, Video } from 'lucide-react';
 import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
 import SectionTitle from '@/components/custom/SectionTitle';
-// Removed Button import as it's no longer used for AI suggestions link here
 
 export default function Home() {
   const projects = [
     {
       icon: <Film />,
-      description: <>Portfólio feito com alma e café forte <span aria-label="Emoji pensativo">🤔</span></>,
+      description: <>Portfólio feito com alma e café forte <span aria-label="xícara de café">☕</span></>,
       imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Primary/Background
       imageAlt: 'Ícone pasta de arquivos estilizada',
       dataAiHint: 'creative portfolio',
-    },
-    {
-      icon: <Film />,
-      description: 'Curtas metragens premiados internacionalmente.',
-      imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Accent/Background
-      imageAlt: 'Cena de filme abstrata',
-      dataAiHint: 'film scene',
     },
   ];
 
   const clients = [
     {
       icon: <Users />,
-      description: 'Clientes Satisfeitos que Confiam na FastFilms.',
+      description: 'Clientes',
       imageUrl: 'https://placehold.co/600x400.png',
       imageAlt: 'Pessoas em colaboração em um projeto',
       dataAiHint: 'team collaboration',
@@ -37,8 +29,8 @@ export default function Home() {
 
   const equipment = [
     {
-      icon: <Camera />,
-      description: 'Equipamentos de Ponta para Produções Incríveis.',
+      icon: <Video />,
+      description: 'Equipamentos',
       imageUrl: 'https://placehold.co/600x400.png',
       imageAlt: 'Câmera de vídeo profissional em um tripé',
       dataAiHint: 'video camera',
