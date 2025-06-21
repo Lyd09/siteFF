@@ -49,13 +49,13 @@ export default function Home() {
           <ContactInfo />
         </div>
         
-        <Button variant="destructive" asChild>
+        <Button variant="destructive" asChild className="w-auto">
           <Link href="#">
             <Image
               src="/lockUSER.svg"
               alt="Ícone de usuário e cadeado"
-              width={16}
-              height={16}
+              width={24}
+              height={24}
               data-ai-hint="user lock"
             />
             Só pra quem joga junto
