@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -20,7 +19,7 @@ const LogoBox: React.FC<LogoBoxProps> = ({ className }) => {
         src="/logoFF.svg"
         alt="FastFilms Logo"
         fill
-        className="object-contain [filter:drop-shadow(3px_4px_3px_rgba(0,0,0,0.4))]"
+        className="object-contain [filter:drop-shadow(12px_13px_3px_rgba(0,0,0,0.4))]"
         data-ai-hint="company logo"
       />
     </div>

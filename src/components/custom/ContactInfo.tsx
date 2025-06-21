@@ -15,7 +15,7 @@ interface ContactItemProps {
 const ContactItem: React.FC<ContactItemProps> = ({ iconSrc, iconAlt, text, className, href, dataAiHint }) => {
   const content = (
     <>
-      <div className="relative w-6 h-6 [filter:drop-shadow(3px_4px_3px_rgba(0,0,0,0.4))]" aria-hidden="true">
+      <div className="relative w-6 h-6 [filter:drop-shadow(12px_13px_3px_rgba(0,0,0,0.4))]" aria-hidden="true">
         <Image
           src={iconSrc}
           alt={iconAlt}
