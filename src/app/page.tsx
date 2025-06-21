@@ -6,7 +6,6 @@ import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
 import SectionTitle from '@/components/custom/SectionTitle';
-import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const projects = [
@@ -49,18 +48,12 @@ export default function Home() {
           <ContactInfo />
         </div>
         
-        <Button variant="destructive" asChild className="w-auto">
-          <Link href="#">
-            <Image
-              src="/lockUSER.svg"
-              alt="Ícone de usuário e cadeado"
-              width={24}
-              height={24}
-              data-ai-hint="user lock"
-            />
-            Só pra quem joga junto
-          </Link>
-        </Button>
+        <Link href="#" className="learn-more-button">
+          <span className="circle" aria-hidden="true">
+            <span className="icon user-lock-icon"></span>
+          </span>
+          <span className="button-text">Só pra quem joga junto</span>
+        </Link>
       </aside>
 
       <main className="flex flex-col gap-12 md:gap-16 items-center md:items-stretch">
