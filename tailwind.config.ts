@@ -20,8 +20,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Roboto', 'sans-serif'],
-        headline: ['Playfair Display', 'serif'],
+        body: ['Helvetica', 'sans-serif'],
+        headline: ['Helvetica', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
