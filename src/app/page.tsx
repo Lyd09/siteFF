@@ -48,7 +48,7 @@ export default function Home() {
           <ContactInfo />
         </div>
         
-        <Link href="#" className="learn-more-button">
+        <Link href="https://gestao-de-clientes-ff.netlify.app/" target="_blank" rel="noopener noreferrer" className="learn-more-button">
           <span className="circle" aria-hidden="true">
             <span className="icon user-lock-icon"></span>
           </span>
