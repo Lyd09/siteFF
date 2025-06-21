@@ -73,7 +73,7 @@ export default function Home() {
             <AlertDialogHeader>
               <AlertDialogTitle>Acesso Restrito</AlertDialogTitle>
               <AlertDialogDescription>
-                Esta área é exclusiva para os parceiros e colaboradores da FastFilms. Se você faz parte da nossa equipe, clique em 'Continuar' para acessar.
+                Esta área é exclusiva para os parceiros e colaboradores da FastFilms e o acesso requer login e senha. Se você já tem suas credenciais, clique em 'Continuar'. Novos colaboradores devem solicitar o seu acesso.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
