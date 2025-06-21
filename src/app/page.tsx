@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Film, Users, Video } from 'lucide-react';
+import { Film, Play, Users, Video } from 'lucide-react';
 import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
@@ -9,7 +9,12 @@ import SectionTitle from '@/components/custom/SectionTitle';
 export default function Home() {
   const projects = [
     {
-      icon: <Film />,
+      icon: (
+        <span className="relative">
+          <Film />
+          <Play className="absolute top-1/2 left-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 fill-current" />
+        </span>
+      ),
       description: <>Portfólio feito com alma e café forte <span aria-label="xícara de café">☕</span></>,
       imageUrl: 'https://placehold.co/300x200/000000/FFFFFF.png', // Primary/Background
       imageAlt: 'Ícone pasta de arquivos estilizada',
