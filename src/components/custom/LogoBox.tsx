@@ -17,7 +17,7 @@ const LogoBox: React.FC<LogoBoxProps> = ({ className }) => {
       aria-label="Logotipo FastFilms"
     >
       <Image
-        src="/logo.png" // Make sure logo.png is in your /public folder
+        src="/logoFF.png" // Make sure logoFF.png is in your /public folder
         alt="FastFilms Logo"
         layout="fill"
         objectFit="contain"
