@@ -92,7 +92,9 @@ export default function Home() {
           <SectionTitle id="proj-title">Nossos Projetos</SectionTitle>
           <div className="space-y-6">
             {projects.map((item, index) => (
-              <PortfolioCard key={`project-${index}`} {...item} />
+              <Link href="/portfolio" key={`project-link-${index}`} className="block transition-transform hover:scale-[1.02]">
+                <PortfolioCard {...item} />
+              </Link>
             ))}
           </div>
         </section>
@@ -101,7 +103,9 @@ export default function Home() {
           <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
           <div className="space-y-6">
             {clients.map((item, index) => (
-              <PortfolioCard key={`client-${index}`} {...item} />
+              <Link href="/clientes" key={`client-link-${index}`} className="block transition-transform hover:scale-[1.02]">
+                <PortfolioCard {...item} />
+              </Link>
             ))}
           </div>
         </section>
@@ -110,7 +114,9 @@ export default function Home() {
           <SectionTitle id="equip-title">Os brinquedos de gente grande</SectionTitle>
           <div className="space-y-6">
             {equipment.map((item, index) => (
-              <PortfolioCard key={`equipment-${index}`} {...item} />
+              <Link href="/equipamentos" key={`equipment-link-${index}`} className="block transition-transform hover:scale-[1.02]">
+                <PortfolioCard {...item} />
+              </Link>
             ))}
           </div>
         </section>
