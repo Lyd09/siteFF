@@ -92,9 +92,9 @@ export default function Home() {
           <SectionTitle id="proj-title">Nossos Projetos</SectionTitle>
           <div className="space-y-6">
             {projects.map((item, index) => (
-              <Link href="/portfolio" key={`project-link-${index}`} className="block transition-transform hover:scale-[1.02]">
+              <a href="/portfolio" key={`project-link-${index}`} className="block transition-transform hover:scale-[1.02]">
                 <PortfolioCard {...item} />
-              </Link>
+              </a>
             ))}
           </div>
         </section>
@@ -123,4 +123,3 @@ export default function Home() {
       </main>
     </div>
   );
-}
