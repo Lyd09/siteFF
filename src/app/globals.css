@@ -257,7 +257,6 @@
 .page-grid:has(.social-link-container:hover) > main {
   filter: blur(3px);
   transition: filter 0.3s ease-in-out;
-  pointer-events: none;
 }
 
 /* Custom Animated Button */
