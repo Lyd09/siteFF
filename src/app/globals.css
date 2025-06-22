@@ -338,3 +338,65 @@
 .learn-more-button:hover .button-text {
   color: white;
 }
+
+/* Shine effect from user, adapted for theme */
+.shine {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* bold */
+  font-size: 1.75rem; /* ~28px, looks good in header */
+  line-height: 1.2;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary)) -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(hsl(var(--primary))),
+      to(hsl(var(--primary))),
+      color-stop(0.5, hsl(var(--primary-foreground)))
+    ) 0 0 no-repeat;
+  background-image: -webkit-linear-gradient(
+    -40deg,
+    transparent 0%,
+    transparent 40%,
+    hsl(var(--primary-foreground)) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-size: 60px;
+  background-size: 60px;
+  -webkit-animation: zezzz 5s infinite;
+  animation: zezzz 5s infinite;
+}
+
+.dark .shine {
+    background-image: -webkit-linear-gradient(
+        -40deg,
+        transparent 0%,
+        transparent 40%,
+        #fff 50%,
+        transparent 60%,
+        transparent 100%
+    );
+     background-image: linear-gradient(
+        130deg,
+        transparent 0%,
+        transparent 40%,
+        #fff 50%,
+        transparent 60%,
+        transparent 100%
+    );
+}
+
+@keyframes zezzz {
+  0%, 10% { background-position: -300px; }
+  20% { background-position: top left; }
+  100% { background-position: 300px; }
+}
+@-webkit-keyframes zezzz {
+  0%, 10% { background-position: -300px; }
+  20% { background-position: top left; }
+  100% { background-position: 300px; }
+}

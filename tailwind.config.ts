@@ -20,8 +20,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Helvetica', 'sans-serif'],
-        headline: ['Helvetica', 'sans-serif'],
+        body: ['PT Sans', 'sans-serif'],
+        headline: ['Playfair Display', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
