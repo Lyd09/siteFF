@@ -16,7 +16,7 @@ const portfolioProjects = [
 
 export default function PortfolioPage() {
   return (
-    <div className="container mx-auto px-4 py-8 md:py-12">
+    <>
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">Nosso Portfólio</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         Aqui estão alguns dos projetos que tivemos o prazer de produzir. Cada vídeo é uma história que ajudamos a contar.
@@ -36,6 +36,6 @@ export default function PortfolioPage() {
           </Card>
         ))}
       </div>
-    </div>
+    </>
   );
 }

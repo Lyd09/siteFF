@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 
 const SimpleHeader = () => {
@@ -18,11 +16,6 @@ const SimpleHeader = () => {
           />
           <div className="shine">FastFilms</div>
         </Link>
-        <Button variant="outline" asChild>
-          <Link href="/">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Voltar ao Portfólio
-          </Link>
-        </Button>
       </div>
     </header>
   );

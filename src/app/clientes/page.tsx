@@ -17,7 +17,7 @@ const testimonials = [
 
 export default function ClientesPage() {
   return (
-    <div className="container mx-auto px-4 py-8 md:py-12">
+    <>
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">Gente que Confia na Gente</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         O sucesso dos nossos clientes é o nosso maior prêmio. Veja o que alguns deles têm a dizer sobre nossa parceria.
@@ -46,6 +46,6 @@ export default function ClientesPage() {
           </Card>
         ))}
       </div>
-    </div>
+    </>
   );
 }
