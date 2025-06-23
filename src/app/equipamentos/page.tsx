@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -40,7 +41,7 @@ const setups = [
     ]
   },
   {
-    title: "Workstation Móvel",
+    title: "Mobile Workstation",
     user: "Samsung Galaxy Book4: Mobilidade e performance para gravações e edições em campo.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5-120U' },
