@@ -10,8 +10,8 @@ export const metadata = {
 
 const setups = [
   {
-    title: "Estação de Edição Principal",
-    user: "Desktop Pessoal",
+    title: "Workstation Ryzen",
+    user: "Performance AMD para edição e renderização pesada.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Ryzen 5 5600G' },
       { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'INNO3D NVIDIA GeForce RTX 4060 COMPACT 8GB' },
@@ -25,8 +25,8 @@ const setups = [
     ]
   },
   {
-    title: "Estação de Pós-produção e Suporte",
-    user: "Desktop do Sócio",
+    title: "Workstation Intel",
+    user: "Agilidade Intel para um fluxo de trabalho criativo e versátil.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5 12400F' },
       { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'NVIDIA GeForce RTX 4060' },
