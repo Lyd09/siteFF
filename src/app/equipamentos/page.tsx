@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video } from 'lucide-react';
+import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Estações de Trabalho | FastFilms',
-  description: 'Conheça as máquinas por trás da nossa magia.',
+  title: 'Equipamentos | FastFilms',
+  description: 'Conheça as ferramentas e tecnologias que dão vida aos nossos projetos.',
 };
 
 const setups = [
@@ -41,6 +41,32 @@ const setups = [
   }
 ];
 
+const otherEquipment = [
+  {
+    title: 'Câmera',
+    icon: <Camera className="h-7 w-7" />,
+    items: [
+      { name: 'Sony A6000', description: 'Câmera mirrorless versátil, ideal para filmagens e fotos em alta resolução, conhecida por seu autofoco rápido.' },
+    ]
+  },
+  {
+    title: 'Áudio',
+    icon: <Mic2 className="h-7 w-7" />,
+    items: [
+      { name: 'Hollyland LARK M2', description: 'Sistema de microfone de lapela sem fio, garantindo áudio limpo e profissional em qualquer situação.' },
+    ]
+  },
+  {
+    title: 'Software',
+    icon: <Wand2 className="h-7 w-7" />,
+    items: [
+      { name: 'Adobe Premiere Pro', description: 'Edição de vídeo não-linear padrão da indústria.' },
+      { name: 'Adobe After Effects', description: 'Pós-produção, motion graphics e efeitos visuais.' },
+      { name: 'Adobe Photoshop', description: 'Tratamento de imagem, design e composições digitais.' },
+    ]
+  }
+];
+
 export default function EquipamentosPage() {
   return (
     <>
@@ -50,11 +76,12 @@ export default function EquipamentosPage() {
           Para entregar resultados de alta performance, contamos com equipamentos à altura. Estes são os setups que dão vida aos nossos projetos, garantindo fluidez e qualidade máxima da captura à finalização.
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
         {setups.map((setup, index) => (
           <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow w-full flex flex-col">
             <CardHeader>
               <CardTitle className="font-headline text-2xl">{setup.title}</CardTitle>
+
               <CardDescription>{setup.user}</CardDescription>
             </CardHeader>
             <CardContent>
@@ -71,6 +98,41 @@ export default function EquipamentosPage() {
                       </div>
                     </div>
                     {compIndex < setup.components.length - 1 && <Separator className="mt-4" />}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      <Separator className="my-8 md:my-16" />
+
+      <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Câmera, Áudio e Software</h2>
+        <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
+          Completando nossos setups, utilizamos equipamentos de captura e softwares padrão da indústria para garantir a excelência em cada detalhe.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {otherEquipment.map((category, index) => (
+          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+            <CardHeader>
+              <div className="flex items-center gap-4">
+                <div className="text-accent p-3 bg-accent/10 rounded-lg">
+                  {category.icon}
+                </div>
+                <CardTitle className="font-headline text-2xl">{category.title}</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {category.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <p className="font-semibold">{item.name}</p>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    {itemIndex < category.items.length - 1 && <Separator className="mt-3" />}
                   </li>
                 ))}
               </ul>
