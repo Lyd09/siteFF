@@ -75,6 +75,7 @@ const otherEquipment = [
       { name: 'Adobe Premiere Pro', description: 'Edição de vídeo não-linear padrão da indústria.' },
       { name: 'Adobe After Effects', description: 'Pós-produção, motion graphics e efeitos visuais.' },
       { name: 'Adobe Photoshop', description: 'Tratamento de imagem, design e composições digitais.' },
+      { name: 'Adobe Lightroom', description: 'Organização, tratamento e edição de fotos em lote.' },
     ]
   }
 ];
