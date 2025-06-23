@@ -1,38 +1,79 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Camera, Bot, Lightbulb, Mic2, Film } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video } from 'lucide-react';
 
 export const metadata = {
-  title: 'Equipamentos | FastFilms',
-  description: 'Conheça os equipamentos que usamos para dar vida às suas ideias.',
+  title: 'Estações de Trabalho | FastFilms',
+  description: 'Conheça as máquinas por trás da nossa magia.',
 };
 
-const equipmentList = [
-  { title: 'Câmeras de Cinema', description: 'Utilizamos câmeras de ponta como RED e ARRI para garantir a máxima qualidade de imagem.', icon: <Camera className="h-10 w-10" /> },
-  { title: 'Lentes Premium', description: 'Uma vasta seleção de lentes prime e zoom para criar a estética perfeita para cada cena.', icon: <Film className="h-10 w-10" /> },
-  { title: 'Drones Cinematográficos', description: 'Capturamos imagens aéreas de tirar o fôlego com drones equipados com câmeras 4K.', icon: <Bot className="h-10 w-10" /> },
-  { title: 'Iluminação Profissional', description: 'Kits de iluminação completos para controlar cada detalhe da luz e da sombra.', icon: <Lightbulb className="h-10 w-10" /> },
-  { title: 'Captação de Áudio', description: 'Microfones shotgun, lapelas e gravadores de alta fidelidade para um som cristalino.', icon: <Mic2 className="h-10 w-10" /> },
+const setups = [
+  {
+    title: "Estação de Edição Principal",
+    user: "Setup 1",
+    components: [
+      { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Ryzen 5 5600G' },
+      { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'INNO3D NVIDIA GeForce RTX 4060 COMPACT 8GB' },
+      { icon: <MemoryStick className="h-5 w-5" />, category: 'RAM', model: '32GB Asgard' },
+      { icon: <Monitor className="h-5 w-5" />, category: 'Monitor 1', model: 'ASRock Phantom Gaming PG27FF1A 27" 165Hz IPS' },
+      { icon: <Monitor className="h-5 w-5" />, category: 'Monitor 2', model: 'LG 23.8" 75Hz' },
+      { icon: <Keyboard className="h-5 w-5" />, category: 'Teclado', model: 'SuperFrame PLAYER 1 Mecânico Switch Blue' },
+      { icon: <Mouse className="h-5 w-5" />, category: 'Mouse', model: 'RED Dragon King Cobra M711-FPS-1' },
+      { icon: <Mic2 className="h-5 w-5" />, category: 'Microfone', model: 'FIFINE A6T' },
+      { icon: <Headphones className="h-5 w-5" />, category: 'Headset', model: 'Hyperx Cloud Stinger' },
+    ]
+  },
+  {
+    title: "Estação de Pós-produção e Suporte",
+    user: "Setup 2",
+    components: [
+      { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5 12400F' },
+      { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'NVIDIA GeForce RTX 4060' },
+      { icon: <MemoryStick className="h-5 w-5" />, category: 'RAM', model: '16GB' },
+      { icon: <Monitor className="h-5 w-5" />, category: 'Monitor 1', model: 'ASUS 24" 144Hz' },
+      { icon: <Monitor className="h-5 w-5" />, category: 'Monitor 2', model: 'Samsung 22" 60Hz' },
+      { icon: <Keyboard className="h-5 w-5" />, category: 'Teclado', model: 'MOTOSPEED CK61' },
+      { icon: <Mouse className="h-5 w-5" />, category: 'Mouse', model: 'Logitech G PRO' },
+      { icon: <Mic2 className="h-5 w-5" />, category: 'Microfone', model: 'FIFINE A6T' },
+      { icon: <Headphones className="h-5 w-5" />, category: 'Headset', model: 'Astro A10 - Logitech' },
+    ]
+  }
 ];
 
 export default function EquipamentosPage() {
   return (
     <>
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">Nossos Equipamentos</h1>
-      <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-        Acreditamos que a ferramenta certa faz toda a diferença. Por isso, investimos em equipamentos de última geração para entregar resultados excepcionais.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {equipmentList.map((item, index) => (
-          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow text-center p-6 flex flex-col items-center">
-            <div className="p-4 bg-accent/10 rounded-full mb-4 text-accent">
-              {item.icon}
-            </div>
-            <CardHeader className="p-0">
-              <CardTitle className="mb-2">{item.title}</CardTitle>
+      <div className="text-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Nossas Estações de Trabalho</h1>
+        <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
+          Para entregar resultados de alta performance, contamos com equipamentos à altura. Estes são os setups que dão vida aos nossos projetos, garantindo fluidez e qualidade máxima da captura à finalização.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {setups.map((setup, index) => (
+          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow w-full flex flex-col">
+            <CardHeader>
+              <CardTitle className="font-headline text-2xl">{setup.title}</CardTitle>
+              <CardDescription>{setup.user}</CardDescription>
             </CardHeader>
-            <CardContent className="p-0">
-              <p className="text-muted-foreground">{item.description}</p>
+            <CardContent>
+              <ul className="space-y-4">
+                {setup.components.map((component, compIndex) => (
+                  <li key={compIndex}>
+                    <div className="flex items-center gap-4">
+                      <div className="text-accent">
+                        {component.icon}
+                      </div>
+                      <div className="flex-grow">
+                        <p className="font-semibold">{component.category}</p>
+                        <p className="text-sm text-muted-foreground">{component.model}</p>
+                      </div>
+                    </div>
+                    {compIndex < setup.components.length - 1 && <Separator className="mt-4" />}
+                  </li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
         ))}
