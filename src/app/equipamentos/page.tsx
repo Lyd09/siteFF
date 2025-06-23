@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2 } from 'lucide-react';
+import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2, HardDrive } from 'lucide-react';
 
 export const metadata = {
   title: 'Equipamentos | FastFilms',
@@ -37,6 +37,17 @@ const setups = [
       { icon: <Mouse className="h-5 w-5" />, category: 'Mouse', model: 'Logitech G PRO' },
       { icon: <Mic2 className="h-5 w-5" />, category: 'Microfone', model: 'FIFINE A6T' },
       { icon: <Headphones className="h-5 w-5" />, category: 'Headset', model: 'Astro A10 - Logitech' },
+    ]
+  },
+  {
+    title: "Notebook Galaxy Book4",
+    user: "Mobilidade e performance para gravações e edições em campo.",
+    components: [
+      { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5-120U' },
+      { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'NVIDIA GeForce MX570 (Dedicada)' },
+      { icon: <MemoryStick className="h-5 w-5" />, category: 'RAM', model: '16GB LPDDR4x' },
+      { icon: <HardDrive className="h-5 w-5" />, category: 'Armazenamento', model: '512GB NVMe SSD' },
+      { icon: <Monitor className="h-5 w-5" />, category: 'Tela', model: '15.6" Full HD (1920x1080) IPS Antirreflexo' },
     ]
   }
 ];
