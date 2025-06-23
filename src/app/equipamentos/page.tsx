@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2, HardDrive } from 'lucide-react';
+import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2, HardDrive, PackagePlus } from 'lucide-react';
 
 export const metadata = {
   title: 'Equipamentos | FastFilms',
@@ -10,7 +10,7 @@ export const metadata = {
 
 const setups = [
   {
-    title: "Workstation Ryzen",
+    title: "Estação de Trabalho Ryzen",
     user: "Performance AMD para edição e renderização pesada.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Ryzen 5 5600G' },
@@ -25,7 +25,7 @@ const setups = [
     ]
   },
   {
-    title: "Workstation Intel",
+    title: "Estação de Trabalho Intel",
     user: "Agilidade Intel para um fluxo de trabalho criativo e versátil.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5 12400F' },
@@ -40,8 +40,8 @@ const setups = [
     ]
   },
   {
-    title: "Notebook Galaxy Book4",
-    user: "Mobilidade e performance para gravações e edições em campo.",
+    title: "Estação de Trabalho Móvel",
+    user: "Samsung Galaxy Book4: Mobilidade e performance para gravações e edições em campo.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5-120U' },
       { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'NVIDIA GeForce MX570 (Dedicada)' },
@@ -150,6 +150,20 @@ export default function EquipamentosPage() {
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      <Separator className="my-8 md:my-16" />
+
+      <div className="text-center">
+        <div className="flex justify-center items-center gap-4 mb-4">
+            <div className="text-accent p-3 bg-accent/10 rounded-lg">
+                <PackagePlus className="h-8 w-8" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">E Muito Mais</h2>
+        </div>
+        <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
+          Além do que listamos, nosso arsenal está sempre crescendo. Contamos também com um MacBook para fluxos de trabalho específicos, estabilizadores, iluminação profissional e uma variedade de acessórios para garantir que cada projeto tenha exatamente o que precisa para brilhar.
+        </p>
       </div>
     </>
   );
