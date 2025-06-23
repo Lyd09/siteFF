@@ -10,7 +10,7 @@ export const metadata = {
 
 const setups = [
   {
-    title: "Estação de Trabalho Ryzen",
+    title: "Workstation Ryzen",
     user: "Performance AMD para edição e renderização pesada.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Ryzen 5 5600G' },
@@ -25,7 +25,7 @@ const setups = [
     ]
   },
   {
-    title: "Estação de Trabalho Intel",
+    title: "Workstation Intel",
     user: "Agilidade Intel para um fluxo de trabalho criativo e versátil.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5 12400F' },
@@ -40,7 +40,7 @@ const setups = [
     ]
   },
   {
-    title: "Estação de Trabalho Móvel",
+    title: "Workstation Móvel",
     user: "Samsung Galaxy Book4: Mobilidade e performance para gravações e edições em campo.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5-120U' },
@@ -82,7 +82,7 @@ export default function EquipamentosPage() {
   return (
     <>
       <div className="text-center">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Nossas Estações de Trabalho</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Nossas Workstations</h1>
         <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
           Para entregar resultados de alta performance, contamos com equipamentos à altura. Estes são os setups que dão vida aos nossos projetos, garantindo fluidez e qualidade máxima da captura à finalização.
         </p>
@@ -162,7 +162,7 @@ export default function EquipamentosPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">E Muito Mais</h2>
         </div>
         <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Além do que listamos, nosso arsenal está sempre crescendo. Contamos também com um MacBook para fluxos de trabalho específicos, estabilizadores, iluminação profissional e uma variedade de acessórios para garantir que cada projeto tenha exatamente o que precisa para brilhar.
+          Além do que listamos, nosso arsenal está sempre crescendo. Contamos com uma variedade de acessórios e equipamentos profissionais para garantir que cada projeto tenha exatamente o que precisa para brilhar.
         </p>
       </div>
     </>
