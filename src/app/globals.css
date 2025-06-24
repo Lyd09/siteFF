@@ -136,7 +136,7 @@
 }
 
 .dark .blob {
-  background-color: #663399;
+  background-color: hsl(var(--primary));
   opacity: 0.5;
 }
 
@@ -220,6 +220,10 @@
 
 .socialContainer:hover .socialSvg {
   animation: slide-in-top 0.3s both;
+}
+
+.socialContainer:hover .socialSvg path {
+  fill: hsl(var(--primary));
 }
 
 @keyframes slide-in-top {
