@@ -69,7 +69,7 @@ const otherEquipment = [
     title: 'Câmera',
     icon: <Camera className="h-7 w-7" />,
     items: [
-      { name: 'Sony A6000', description: 'Câmera mirrorless versátil, ideal para filmagens e fotos em alta resolução, conhecida por seu autofoco rápido.' },
+      { name: 'Sony A6500', description: 'Câmera mirrorless avançada com estabilização de imagem no corpo, ideal para filmagens 4K e fotos de alta qualidade, mesmo em movimento.' },
     ]
   },
   {
