@@ -384,7 +384,7 @@
         -40deg,
         transparent 0%,
         transparent 40%,
-        #fff 50%,
+        hsl(var(--primary-foreground)) 50%,
         transparent 60%,
         transparent 100%
     );
@@ -392,7 +392,7 @@
         130deg,
         transparent 0%,
         transparent 40%,
-        #fff 50%,
+        hsl(var(--primary-foreground)) 50%,
         transparent 60%,
         transparent 100%
     );
