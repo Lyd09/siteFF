@@ -24,7 +24,7 @@ export default function ClientesPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+          <Card key={index} className="transition-shadow flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-4">
                 <Avatar className="h-16 w-16">

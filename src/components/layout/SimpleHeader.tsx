@@ -8,7 +8,7 @@ const SimpleHeader = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 text-primary hover:text-primary/80 transition-colors">
           <Image
-            src="/FF-COM-FUNDO.svg"
+            src="/FF-COM-FUNDO-CINZA.svg"
             alt="FastFilms Logo"
             width={40}
             height={40}

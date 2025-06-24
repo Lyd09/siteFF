@@ -23,7 +23,7 @@ export default function Home() {
   const projects = [
     {
       icon: (
-        <Image src="/filmPLAY.svg" alt="Ícone de filme com play" width={32} height={32} />
+        <Image src="/filmPLAY-branco.svg" alt="Ícone de filme com play" width={32} height={32} />
       ),
       description: <>Portfólio feito com alma e café forte <span aria-label="xícara de café">☕</span></>,
       imageUrl: '/PORTFOLIO.svg',

@@ -102,7 +102,7 @@ export default function EquipamentosPage() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
         {setups.map((setup, index) => (
-          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow w-full flex flex-col">
+          <Card key={index} className="transition-shadow w-full flex flex-col">
             <CardHeader>
               <CardTitle className="font-headline text-2xl">{setup.title}</CardTitle>
 
@@ -141,7 +141,7 @@ export default function EquipamentosPage() {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {otherEquipment.map((category, index) => (
-          <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+          <Card key={index} className="transition-shadow flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-4">
                 <div className="text-accent p-3 bg-accent/10 rounded-lg">

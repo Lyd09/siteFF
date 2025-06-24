@@ -58,7 +58,7 @@
     --accent-foreground: 0 0% 9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 15%;
+    --border: 0 0% 20%;
     --input: 0 0% 15%;
     --ring: 0 0% 80%;
 
@@ -136,7 +136,7 @@
 }
 
 .dark .blob {
-  background-color: hsl(0, 0%, 50%);
+  background-color: #663399;
   opacity: 0.5;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .socialSvg path {
-  fill: rgb(255, 255, 255);
+  fill: hsl(var(--primary-foreground));
 }
 
 .socialContainer:hover .socialSvg {

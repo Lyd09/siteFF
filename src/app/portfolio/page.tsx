@@ -23,7 +23,7 @@ export default function PortfolioPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {portfolioProjects.map((project, index) => (
-          <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
+          <Card key={index} className="overflow-hidden transition-shadow group">
             <div className="relative h-64 w-full">
                 <Image src={project.imageUrl} alt={project.title} fill className="rounded-t-lg object-cover transition-transform group-hover:scale-105" data-ai-hint={project.dataAiHint}/>
             </div>
