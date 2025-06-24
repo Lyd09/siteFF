@@ -135,6 +135,11 @@
   animation: blob-bounce 8s infinite ease;
 }
 
+.dark .blob {
+  background-color: hsl(270, 80%, 60%);
+  opacity: 0.7;
+}
+
 @keyframes blob-bounce {
   0% {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
