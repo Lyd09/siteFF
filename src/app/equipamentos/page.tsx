@@ -52,8 +52,8 @@ const setups = [
     ]
   },
   {
-    title: "MacBook Air M1",
-    user: "A eficiência e o ecossistema Apple para edições e gerenciamento de projetos em qualquer lugar.",
+    title: "MacBook Workstation",
+    user: "MacBook Air M1: A eficiência e o ecossistema Apple para edições e gerenciamento de projetos em qualquer lugar.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Apple M1 (8-core CPU)' },
       { icon: <Video className="h-5 w-5" />, category: 'GPU', model: 'GPU de 7 núcleos (Integrada)' },
