@@ -41,7 +41,7 @@ const setups = [
     ]
   },
   {
-    title: "Mobile Workstation",
+    title: "Galaxy Workstation",
     user: "Samsung Galaxy Book4: Mobilidade e performance para gravações e edições em campo.",
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5-120U' },
