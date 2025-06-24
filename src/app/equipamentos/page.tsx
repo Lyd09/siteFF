@@ -50,6 +50,17 @@ const setups = [
       { icon: <HardDrive className="h-5 w-5" />, category: 'Armazenamento', model: '512GB NVMe SSD' },
       { icon: <Monitor className="h-5 w-5" />, category: 'Tela', model: '15.6" Full HD (1920x1080) IPS Antirreflexo' },
     ]
+  },
+  {
+    title: "MacBook Air M1",
+    user: "A eficiência e o ecossistema Apple para edições e gerenciamento de projetos em qualquer lugar.",
+    components: [
+      { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Apple M1 (8-core CPU)' },
+      { icon: <Video className="h-5 w-5" />, category: 'GPU', model: 'GPU de 7 núcleos (Integrada)' },
+      { icon: <MemoryStick className="h-5 w-5" />, category: 'Memória Unificada', model: '8GB' },
+      { icon: <HardDrive className="h-5 w-5" />, category: 'Armazenamento', model: '256GB SSD' },
+      { icon: <Monitor className="h-5 w-5" />, category: 'Tela', model: '13.3" Retina com True Tone' },
+    ]
   }
 ];
 
