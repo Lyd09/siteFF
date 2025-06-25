@@ -186,7 +186,7 @@ export default function EquipamentosPage() {
           <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
             {softwareEquipment.items.map((item, itemIndex) => (
               <li key={itemIndex} className="flex flex-col items-center text-center">
-                 <div className="relative w-full max-w-[120px] rounded-lg overflow-hidden mb-4 shadow-md aspect-square">
+                 <div className="relative w-full max-w-[120px] rounded-full overflow-hidden mb-4 shadow-md aspect-square">
                    <Image
                       src={item.imageUrl}
                       alt={`Imagem para ${item.name}`}
