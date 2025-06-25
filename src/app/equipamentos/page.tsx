@@ -135,7 +135,7 @@ export default function EquipamentosPage() {
       <div className="text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Câmera, Áudio e Software</h2>
         <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Completando nossos setups, utilizamos equipamentos de captura e softwares padrão da indústria para garantir a excelência em cada detalhe.
+          Câmeras afiadas, áudio cristalino e softwares que fazem tudo ganhar forma e ritmo.
         </p>
       </div>
       
