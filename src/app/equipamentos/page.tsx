@@ -66,7 +66,7 @@ const setups = [
   }
 ];
 
-const otherEquipment = [
+const mainEquipment = [
   {
     title: 'Câmera',
     icon: <Camera className="h-7 w-7" />,
@@ -80,18 +80,19 @@ const otherEquipment = [
     items: [
       { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'wireless microphone' },
     ]
-  },
-  {
-    title: 'Software',
-    icon: <Wand2 className="h-7 w-7" />,
-    items: [
-      { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'premiere pro logo' },
-      { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'after effects logo' },
-      { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'photoshop logo' },
-      { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'lightroom logo' },
-    ]
   }
 ];
+
+const softwareEquipment = {
+  title: 'Software',
+  icon: <Wand2 className="h-7 w-7" />,
+  items: [
+    { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'premiere pro logo' },
+    { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'after effects logo' },
+    { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'photoshop logo' },
+    { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'lightroom logo' },
+  ]
+};
 
 export default function EquipamentosPage() {
   return (
@@ -107,7 +108,6 @@ export default function EquipamentosPage() {
           <Card key={index} className="transition-shadow w-full flex flex-col">
             <CardHeader>
               <CardTitle className="font-headline text-2xl">{setup.title}</CardTitle>
-
               <CardDescription>{setup.user}</CardDescription>
             </CardHeader>
             <CardContent>
@@ -141,8 +141,8 @@ export default function EquipamentosPage() {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {otherEquipment.map((category, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {mainEquipment.map((category, index) => (
           <Card key={index} className="transition-shadow flex flex-col">
             <CardHeader>
               <div className="flex items-center gap-4">
@@ -153,31 +153,55 @@ export default function EquipamentosPage() {
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-6">
-                {category.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>
-                     <div className={cn(
-                        "relative w-full rounded-lg overflow-hidden mb-4 shadow-md",
-                        category.title === 'Software' ? "aspect-square max-w-[150px] mx-auto" : "aspect-[4/3]"
-                     )}>
-                       <Image
-                          src={item.imageUrl}
-                          alt={`Imagem para ${item.name}`}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={item.dataAiHint}
-                        />
-                    </div>
-                    <p className={cn("font-semibold", category.title === 'Software' ? "text-center" : "text-left")}>{item.name}</p>
-                    <p className={cn("text-sm text-muted-foreground", category.title === 'Software' ? "text-center" : "text-left")}>{item.description}</p>
-                    {itemIndex < category.items.length - 1 && <Separator className="mt-6" />}
-                  </li>
-                ))}
-              </ul>
+              {category.items.map((item) => (
+                <div key={item.name}>
+                  <div className="relative w-full rounded-lg overflow-hidden mb-4 shadow-md aspect-[4/3]">
+                    <Image
+                      src={item.imageUrl}
+                      alt={`Imagem para ${item.name}`}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={item.dataAiHint}
+                    />
+                  </div>
+                  <p className="font-semibold text-left">{item.name}</p>
+                  <p className="text-sm text-muted-foreground text-left">{item.description}</p>
+                </div>
+              ))}
             </CardContent>
           </Card>
         ))}
       </div>
+
+      <Card className="transition-shadow flex flex-col w-full">
+        <CardHeader>
+          <div className="flex items-center gap-4">
+            <div className="text-accent p-3 bg-accent/10 rounded-lg">
+              {softwareEquipment.icon}
+            </div>
+            <CardTitle className="font-headline text-2xl">{softwareEquipment.title}</CardTitle>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
+            {softwareEquipment.items.map((item, itemIndex) => (
+              <li key={itemIndex} className="flex flex-col items-center text-center">
+                 <div className="relative w-full max-w-[120px] rounded-lg overflow-hidden mb-4 shadow-md aspect-square">
+                   <Image
+                      src={item.imageUrl}
+                      alt={`Imagem para ${item.name}`}
+                      fill
+                      className="object-contain p-2"
+                      data-ai-hint={item.dataAiHint}
+                    />
+                </div>
+                <p className="font-semibold">{item.name}</p>
+                <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
 
       <Separator className="my-8 md:my-16" />
 
