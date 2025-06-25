@@ -13,6 +13,7 @@ const clients = [
   { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg', location: 'Pedro Leopoldo' },
   { name: 'Laiite', logo: '/clientes-logos/Laiite.svg', location: 'Pedro Leopoldo' },
   { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares Gontijo.svg', location: 'Contagem' },
+  { name: 'Balcão 360', logo: '/clientes-logos/Balcão360.svg', location: 'Youtube/Spotfy' },
 ];
 
 export default function ClientesPage() {
