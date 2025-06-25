@@ -9,10 +9,10 @@ export const metadata = {
 
 const clients = [
   { name: 'My Broker', logo: '/clientes-logos/My Broker.svg', location: 'Lagoa Santa' },
-  { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA.svg' },
-  { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg' },
-  { name: 'Laiite', logo: '/clientes-logos/Laiite.svg' },
-  { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares Gontijo.svg' },
+  { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA.svg', location: 'Lagoa Santa' },
+  { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg', location: 'Pedro Leopoldo' },
+  { name: 'Laiite', logo: '/clientes-logos/Laiite.svg', location: 'Pedro Leopoldo' },
+  { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares Gontijo.svg', location: 'Contagem' },
 ];
 
 export default function ClientesPage() {
