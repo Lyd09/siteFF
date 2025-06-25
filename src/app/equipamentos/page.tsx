@@ -71,14 +71,14 @@ const mainEquipment = [
     title: 'Câmera',
     icon: <Camera className="h-7 w-7" />,
     items: [
-      { name: 'Sony A6500', description: 'Pequena no tamanho, gigante na entrega. Estabilização no corpo e 4K na veia pra capturar cada detalhe, mesmo em movimento.', imageUrl: '/Equipamentos/Sony A6500.svg', dataAiHint: 'sony camera' },
+      { name: 'Sony A6500', description: 'Pequena no tamanho, gigante na entrega. Estabilização no corpo e 4K na veia pra capturar cada detalhe, mesmo em movimento.', imageUrl: '/Equipamentos/A6500.svg', dataAiHint: 'sony camera' },
     ]
   },
   {
     title: 'Áudio',
     icon: <Mic2 className="h-7 w-7" />,
     items: [
-      { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.', imageUrl: '/Equipamentos/Hollyland LARK M2.svg', dataAiHint: 'wireless microphone' },
+      { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.', imageUrl: '/Equipamentos/Hollyland.svg', dataAiHint: 'wireless microphone' },
     ]
   }
 ];
@@ -87,10 +87,10 @@ const softwareEquipment = {
   title: 'Software',
   icon: <Wand2 className="h-7 w-7" />,
   items: [
-    { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.', imageUrl: '/Equipamentos/Adobe Premiere Pro.svg', dataAiHint: 'premiere pro logo' },
-    { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.', imageUrl: '/Equipamentos/Adobe After Effects.svg', dataAiHint: 'after effects logo' },
-    { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.', imageUrl: '/Equipamentos/Adobe Photoshop.svg', dataAiHint: 'photoshop logo' },
-    { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.', imageUrl: '/Equipamentos/Adobe Lightroom.svg', dataAiHint: 'lightroom logo' },
+    { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.', imageUrl: '/Equipamentos/premiere.svg', dataAiHint: 'premiere pro logo' },
+    { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.', imageUrl: '/Equipamentos/after%20effects.svg', dataAiHint: 'after effects logo' },
+    { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.', imageUrl: '/Equipamentos/photoshop.svg', dataAiHint: 'photoshop logo' },
+    { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.', imageUrl: '/Equipamentos/lightroom.svg', dataAiHint: 'lightroom logo' },
   ]
 };
 
@@ -160,7 +160,7 @@ export default function EquipamentosPage() {
                       src={item.imageUrl}
                       alt={`Imagem para ${item.name}`}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       data-ai-hint={item.dataAiHint}
                     />
                   </div>
