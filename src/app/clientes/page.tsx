@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const clients = [
-  { name: 'My Broker', logo: '/clientes-logos/My Broker.svg' },
+  { name: 'My Broker', logo: '/clientes-logos/My Broker.svg', location: 'Lagoa Santa' },
   { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA.svg' },
   { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg' },
   { name: 'Laiite', logo: '/clientes-logos/Laiite.svg' },
@@ -34,7 +34,12 @@ export default function ClientesPage() {
                 data-ai-hint="client logo"
               />
             </div>
-            <p className="mt-4 font-semibold text-center text-card-foreground">{client.name}</p>
+            <div className="mt-4 text-center">
+              <p className="font-semibold text-card-foreground">{client.name}</p>
+              {client.location && (
+                <p className="text-xs text-muted-foreground">{client.location}</p>
+              )}
+            </div>
           </Card>
         ))}
       </div>
