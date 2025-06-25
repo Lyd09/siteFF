@@ -191,7 +191,7 @@ export default function EquipamentosPage() {
                       src={item.imageUrl}
                       alt={`Imagem para ${item.name}`}
                       fill
-                      className="object-contain p-2"
+                      className="object-contain"
                       data-ai-hint={item.dataAiHint}
                     />
                 </div>
