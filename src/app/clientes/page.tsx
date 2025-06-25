@@ -8,12 +8,12 @@ export const metadata = {
 };
 
 const clients = [
-  { name: 'My Broker', logo: '/clientes-logos/My Broker.svg', location: 'Lagoa Santa' },
-  { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA.svg', location: 'Lagoa Santa' },
+  { name: 'Balcão 360', logo: '/clientes-logos/Balcão360.svg', location: 'Youtube/Spotfy' },
   { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg', location: 'Pedro Leopoldo' },
   { name: 'Laiite', logo: '/clientes-logos/Laiite.svg', location: 'Pedro Leopoldo' },
+  { name: 'My Broker', logo: '/clientes-logos/My Broker.svg', location: 'Lagoa Santa' },
+  { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA.svg', location: 'Lagoa Santa' },
   { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares Gontijo.svg', location: 'Contagem' },
-  { name: 'Balcão 360', logo: '/clientes-logos/Balcão360.svg', location: 'Youtube/Spotfy' },
 ];
 
 export default function ClientesPage() {
@@ -23,7 +23,7 @@ export default function ClientesPage() {
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         Criar junto é como pegar a estrada: precisa confiança, troca e uma boa trilha sonora. Essas marcas vieram no banco da frente.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
         {clients.map((client) => (
           <Card key={client.name} className="flex flex-col items-center justify-center p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
             <div className="relative w-full flex-1">
