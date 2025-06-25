@@ -24,8 +24,8 @@ export default function ClientesPage() {
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
         {clients.map((client) => (
-          <Card key={client.name} className="flex items-center justify-center p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
-            <div className="relative w-full h-full">
+          <Card key={client.name} className="flex flex-col items-center justify-center p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
+            <div className="relative w-full flex-1">
               <Image
                 src={client.logo}
                 alt={`Logo ${client.name}`}
@@ -34,6 +34,7 @@ export default function ClientesPage() {
                 data-ai-hint="client logo"
               />
             </div>
+            <p className="mt-4 font-semibold text-center text-card-foreground">{client.name}</p>
           </Card>
         ))}
       </div>
