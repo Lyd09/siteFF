@@ -9,7 +9,7 @@ export const metadata = {
 
 const clients = [
   { name: 'My Broker', logo: '/clientes-logos/My Broker.svg' },
-  { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA Incoporadora.svg' },
+  { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA%20Incoporadora.svg' },
   { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg' },
   { name: 'Laiite', logo: '/clientes-logos/Laiite.svg' },
   { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares Gontijo.svg' },
