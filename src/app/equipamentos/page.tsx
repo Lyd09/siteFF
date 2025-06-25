@@ -3,6 +3,8 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2, HardDrive, PackagePlus } from 'lucide-react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 export const metadata = {
   title: 'Equipamentos | FastFilms',
@@ -69,24 +71,24 @@ const otherEquipment = [
     title: 'Câmera',
     icon: <Camera className="h-7 w-7" />,
     items: [
-      { name: 'Sony A6500', description: 'Pequena no tamanho, gigante na entrega. Estabilização no corpo e 4K na veia pra capturar cada detalhe, mesmo em movimento.' },
+      { name: 'Sony A6500', description: 'Pequena no tamanho, gigante na entrega. Estabilização no corpo e 4K na veia pra capturar cada detalhe, mesmo em movimento.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'sony camera' },
     ]
   },
   {
     title: 'Áudio',
     icon: <Mic2 className="h-7 w-7" />,
     items: [
-      { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.' },
+      { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.', imageUrl: 'https://placehold.co/600x400.png', dataAiHint: 'wireless microphone' },
     ]
   },
   {
     title: 'Software',
     icon: <Wand2 className="h-7 w-7" />,
     items: [
-      { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.' },
-      { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.' },
-      { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.' },
-      { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.' },
+      { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'premiere pro logo' },
+      { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'after effects logo' },
+      { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'photoshop logo' },
+      { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.', imageUrl: 'https://placehold.co/150x150.png', dataAiHint: 'lightroom logo' },
     ]
   }
 ];
@@ -151,12 +153,24 @@ export default function EquipamentosPage() {
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3">
+              <ul className="space-y-6">
                 {category.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
-                    <p className="font-semibold">{item.name}</p>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                    {itemIndex < category.items.length - 1 && <Separator className="mt-3" />}
+                     <div className={cn(
+                        "relative w-full rounded-lg overflow-hidden mb-4 shadow-md",
+                        category.title === 'Software' ? "aspect-square max-w-[150px] mx-auto" : "aspect-[4/3]"
+                     )}>
+                       <Image
+                          src={item.imageUrl}
+                          alt={`Imagem para ${item.name}`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={item.dataAiHint}
+                        />
+                    </div>
+                    <p className={cn("font-semibold", category.title === 'Software' ? "text-center" : "text-left")}>{item.name}</p>
+                    <p className={cn("text-sm text-muted-foreground", category.title === 'Software' ? "text-center" : "text-left")}>{item.description}</p>
+                    {itemIndex < category.items.length - 1 && <Separator className="mt-6" />}
                   </li>
                 ))}
               </ul>
