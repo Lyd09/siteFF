@@ -45,6 +45,8 @@ const setups = [
   {
     title: "Galaxy Workstation",
     user: "Samsung Galaxy Book4: Mobilidade e performance para gravações e edições em campo.",
+    imageUrl: '/Equipamentos/Galaxy2.svg',
+    dataAiHint: 'samsung laptop',
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Intel Core i5-120U' },
       { icon: <Video className="h-5 w-5" />, category: 'Placa de Vídeo', model: 'NVIDIA GeForce MX570 (Dedicada)' },
@@ -56,6 +58,8 @@ const setups = [
   {
     title: "MacBook Workstation",
     user: "MacBook Air M1: A eficiência e o ecossistema Apple para edições e gerenciamento de projetos em qualquer lugar.",
+    imageUrl: '/Equipamentos/Macbook2.svg',
+    dataAiHint: 'apple macbook',
     components: [
       { icon: <Cpu className="h-5 w-5" />, category: 'Processador', model: 'Apple M1 (8-core CPU)' },
       { icon: <Video className="h-5 w-5" />, category: 'GPU', model: 'GPU de 7 núcleos (Integrada)' },
@@ -100,19 +104,30 @@ export default function EquipamentosPage() {
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Nossas Workstations</h1>
         <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Tem arte, tem café, tem alma. Mas também tem hardware robusto, software de ponta e equipamentos que seguram o rojão.
+          Tem arte, tem café, tem alma. Mas também tem hardware robusto, software de ponta e equipamentos que aguentam o tranco.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
-        {setups.map((setup, index) => (
+        {setups.map((setup: any, index) => (
           <Card key={index} className="transition-shadow w-full flex flex-col">
             <CardHeader>
               <CardTitle className="font-headline text-2xl">{setup.title}</CardTitle>
               <CardDescription>{setup.user}</CardDescription>
             </CardHeader>
             <CardContent>
+              {setup.imageUrl && (
+                <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden mb-6 shadow-md">
+                  <Image
+                    src={setup.imageUrl}
+                    alt={`Imagem do ${setup.title}`}
+                    fill
+                    className="object-contain"
+                    data-ai-hint={setup.dataAiHint}
+                  />
+                </div>
+              )}
               <ul className="space-y-4">
-                {setup.components.map((component, compIndex) => (
+                {setup.components.map((component: any, compIndex: number) => (
                   <li key={compIndex}>
                     <div className="flex items-center gap-4">
                       <div className="text-accent">
