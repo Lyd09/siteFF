@@ -69,24 +69,24 @@ const otherEquipment = [
     title: 'Câmera',
     icon: <Camera className="h-7 w-7" />,
     items: [
-      { name: 'Sony A6500', description: 'Câmera mirrorless avançada com estabilização de imagem no corpo, ideal para filmagens 4K e fotos de alta qualidade, mesmo em movimento.' },
+      { name: 'Sony A6500', description: 'Pequena no tamanho, gigante na entrega. Estabilização no corpo e 4K na veia pra capturar cada detalhe, mesmo em movimento.' },
     ]
   },
   {
     title: 'Áudio',
     icon: <Mic2 className="h-7 w-7" />,
     items: [
-      { name: 'Hollyland LARK M2', description: 'Sistema de microfone de lapela sem fio, garantindo áudio limpo e profissional em qualquer situação.' },
+      { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.' },
     ]
   },
   {
     title: 'Software',
     icon: <Wand2 className="h-7 w-7" />,
     items: [
-      { name: 'Adobe Premiere Pro', description: 'Edição de vídeo não-linear padrão da indústria.' },
-      { name: 'Adobe After Effects', description: 'Pós-produção, motion graphics e efeitos visuais.' },
-      { name: 'Adobe Photoshop', description: 'Tratamento de imagem, design e composições digitais.' },
-      { name: 'Adobe Lightroom', description: 'Organização, tratamento e edição de fotos em lote.' },
+      { name: 'Adobe Premiere Pro', description: 'Se tem play no final, é porque teve Premiere no começo.' },
+      { name: 'Adobe After Effects', description: 'A mágica visual que o público vê, mas não imagina como foi feita.' },
+      { name: 'Adobe Photoshop', description: 'Para deixar tudo exatamente como imaginamos — ou melhor.' },
+      { name: 'Adobe Lightroom', description: 'Um toque nas cores, um ajuste na luz — e pronto: identidade.' },
     ]
   }
 ];
@@ -97,7 +97,7 @@ export default function EquipamentosPage() {
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-primary font-headline">Nossas Workstations</h1>
         <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Para entregar resultados de alta performance, contamos com equipamentos à altura. Estes são os setups que dão vida aos nossos projetos, garantindo fluidez e qualidade máxima da captura à finalização.
+          Tem arte, tem café, tem alma. Mas também tem hardware robusto, software de ponta e equipamentos que seguram o rojão.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
