@@ -20,7 +20,7 @@ export default function ClientesPage() {
     <>
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">Nossos Clientes</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-        Temos orgulho de colaborar com uma variedade de clientes e ajudá-los a contar suas histórias. Estas são algumas das marcas que confiam em nosso trabalho.
+        Criar junto é como pegar a estrada: precisa confiança, troca e uma boa trilha sonora. Essas marcas vieram no banco da frente.
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
         {clients.map((client) => (
