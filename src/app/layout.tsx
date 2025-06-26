@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'FastFilms Portfolio',
-  description: 'Portfolio website for FastFilms video production company.',
+  title: 'FastFilms',
+  description: 'FastFilms: Produção de vídeo com alma e café forte.',
   icons: {
     icon: '/FF CROP SVG.svg',
   },
