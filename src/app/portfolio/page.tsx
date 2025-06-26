@@ -17,16 +17,16 @@ const portfolioProjects = [
         dataAiHint: 'farm lifestyle video',
     },
     {
-        title: 'Gravação no mercado imobiliário no Condomínio Retiro das Águas',
-        imageUrl: '/Portfolio/CASA%2015M.png',
-        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
-        dataAiHint: 'real estate market video',
-    },
-    {
         title: 'Gravação de uma casa de R$15.000.000,00 no Condomínio Estâncias das Amendoeiras',
         imageUrl: '/Portfolio/IMOBILIÁRIO.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
         dataAiHint: 'luxury real estate',
+    },
+    {
+        title: 'Gravação no mercado imobiliário no Condomínio Retiro das Águas',
+        imageUrl: '/Portfolio/CASA%2015M.png',
+        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
+        dataAiHint: 'real estate market video',
     },
     {
         title: 'Dia de gravação no Condomínio Estância das Amendoeiras',
@@ -41,7 +41,7 @@ export default function PortfolioPage() {
     <>
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">Nosso Portfólio</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-        Aqui estão alguns dos projetos que tivemos o prazer de produzir. Cada vídeo é uma história que ajudamos a contar.
+        Tudo aqui passou pelo nosso crivo criativo (e por umas boas horas de render)
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
         {portfolioProjects.map((project, index) => (
