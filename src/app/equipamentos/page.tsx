@@ -89,7 +89,7 @@ const mainEquipment = [
     title: 'Estabilização',
     icon: <Axis3d className="h-7 w-7" />,
     items: [
-      { name: 'Gimbal Scorp Mini', description: 'Movimentos suaves e cenas cinematográficas na ponta dos dedos. Estabilidade profissional para takes dinâmicos.', imageUrl: 'https://placehold.co/400x300.png', dataAiHint: 'camera gimbal' },
+      { name: 'Gimbal Scorp Mini', description: 'Firmeza nos passos, liberdade no movimento. Porque a câmera também merece dançar sem tropeçar.', imageUrl: '/Equipamentos/GIMBAL.svg', dataAiHint: 'camera gimbal' },
     ]
   }
 ];
