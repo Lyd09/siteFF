@@ -11,25 +11,25 @@ export const metadata = {
 
 const portfolioProjects = [
     {
-        title: 'DIA DE/GRAVAÇÃO/CONDOMÍNIO ESTÂNCIA DAS AMENDOEIRAS',
+        title: 'Dia de gravação no Condomínio Estância das Amendoeiras',
         imageUrl: '/Portfolio/GRAVAÇÃO.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
         dataAiHint: 'real estate recording',
     },
     {
-        title: 'GRAVAÇÃO DE UMA CASA DE/R$15.000.000,00/CONDOMÍNIO ESTÂNCIAS DAS AMENDOEIRAS',
+        title: 'Gravação de uma casa de R$15.000.000,00 no Condomínio Estâncias das Amendoeiras',
         imageUrl: '/Portfolio/IMOBILIÁRIO.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
         dataAiHint: 'luxury real estate',
     },
     {
-        title: 'GRAVAÇÃO NO MERCADO /IMOBBILIÁRIO/CONDOMÍNIO RETIRO DAS ÁGUAS',
+        title: 'Gravação no mercado imobiliário no Condomínio Retiro das Águas',
         imageUrl: '/Portfolio/CASA%2015M.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
         dataAiHint: 'real estate market video',
     },
     {
-        title: 'ONDE O TEMPO/RESPIRA /FAZENDA DO MOINHO • HECTARES PREMIUM',
+        title: 'Vídeo "Onde o tempo respira" para Fazenda do Moinho',
         imageUrl: '/Portfolio/RESPIRA.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
         dataAiHint: 'farm lifestyle video',
@@ -49,25 +49,14 @@ export default function PortfolioPage() {
             <Card className="overflow-hidden relative aspect-[9/16] rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
               <Image 
                 src={project.imageUrl} 
-                alt={project.title.replaceAll('/', ' ')} 
+                alt={project.title} 
                 fill 
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 data-ai-hint={project.dataAiHint}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <PlayCircle className="w-20 h-20 text-white/80" />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                    <h2 className="text-white font-headline text-xl lg:text-2xl leading-tight drop-shadow-lg">
-                    {project.title.split('/').map((line, i) => (
-                        <span key={i} className="block">
-                        {line.trim()}
-                        </span>
-                    ))}
-                    </h2>
-                </div>
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <PlayCircle className="w-20 h-20 text-white/80" />
               </div>
             </Card>
           </Link>
