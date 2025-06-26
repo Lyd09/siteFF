@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2, HardDrive, PackagePlus } from 'lucide-react';
+import { Cpu, Headphones, Keyboard, MemoryStick, Mic2, Monitor, Mouse, Video, Camera, Wand2, HardDrive, PackagePlus, Axis3d } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -83,6 +83,13 @@ const mainEquipment = [
     icon: <Mic2 className="h-7 w-7" />,
     items: [
       { name: 'Hollyland LARK M2', description: 'Captura de voz cristalina até no improviso. Porque o áudio também conta história.', imageUrl: '/Equipamentos/Hollyland.svg', dataAiHint: 'wireless microphone' },
+    ]
+  },
+  {
+    title: 'Estabilização',
+    icon: <Axis3d className="h-7 w-7" />,
+    items: [
+      { name: 'Gimbal Scorp Mini', description: 'Movimentos suaves e cenas cinematográficas na ponta dos dedos. Estabilidade profissional para takes dinâmicos.', imageUrl: 'https://placehold.co/400x300.png', dataAiHint: 'camera gimbal' },
     ]
   }
 ];
