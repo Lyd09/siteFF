@@ -114,7 +114,7 @@ export default function EquipamentosPage() {
           Tem arte, tem café, tem alma. Mas também tem hardware robusto, software de ponta e equipamentos que aguentam o tranco.
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-16">
         {setups.map((setup: any, index) => (
           <Card key={index} className="transition-shadow w-full flex flex-col">
             <CardHeader>
@@ -163,7 +163,7 @@ export default function EquipamentosPage() {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-stretch">
         {mainEquipment.map((category, index) => (
           <Card key={index} className="transition-shadow flex flex-col">
             <CardHeader>
@@ -205,10 +205,10 @@ export default function EquipamentosPage() {
           </div>
         </CardHeader>
         <CardContent>
-          <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 items-stretch">
             {softwareEquipment.items.map((item, itemIndex) => (
               <li key={itemIndex} className="flex flex-col items-center text-center">
-                 <div className="relative w-full max-w-[100px] rounded-full overflow-hidden mb-4 shadow-md aspect-square">
+                 <div className="relative w-full max-w-[130px] rounded-full overflow-hidden mb-4 shadow-md aspect-square">
                    <Image
                       src={item.imageUrl}
                       alt={`Imagem para ${item.name}`}
