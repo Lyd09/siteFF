@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'FastFilms Portfolio',
   description: 'Portfolio website for FastFilms video production company.',
+  icons: {
+    icon: '/FF-COM-FUNDO-CINZA.svg',
+  },
 };
 
 export default function RootLayout({
