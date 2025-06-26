@@ -11,16 +11,10 @@ export const metadata = {
 
 const portfolioProjects = [
     {
-        title: 'Dia de gravação no Condomínio Estância das Amendoeiras',
-        imageUrl: '/Portfolio/GRAVAÇÃO.png',
+        title: 'Vídeo "Onde o tempo respira" para Fazenda do Moinho',
+        imageUrl: '/Portfolio/RESPIRA.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
-        dataAiHint: 'real estate recording',
-    },
-    {
-        title: 'Gravação de uma casa de R$15.000.000,00 no Condomínio Estâncias das Amendoeiras',
-        imageUrl: '/Portfolio/IMOBILIÁRIO.png',
-        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
-        dataAiHint: 'luxury real estate',
+        dataAiHint: 'farm lifestyle video',
     },
     {
         title: 'Gravação no mercado imobiliário no Condomínio Retiro das Águas',
@@ -29,10 +23,16 @@ const portfolioProjects = [
         dataAiHint: 'real estate market video',
     },
     {
-        title: 'Vídeo "Onde o tempo respira" para Fazenda do Moinho',
-        imageUrl: '/Portfolio/RESPIRA.png',
+        title: 'Gravação de uma casa de R$15.000.000,00 no Condomínio Estâncias das Amendoeiras',
+        imageUrl: '/Portfolio/IMOBILIÁRIO.png',
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
-        dataAiHint: 'farm lifestyle video',
+        dataAiHint: 'luxury real estate',
+    },
+    {
+        title: 'Dia de gravação no Condomínio Estância das Amendoeiras',
+        imageUrl: '/Portfolio/GRAVAÇÃO.png',
+        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
+        dataAiHint: 'real estate recording',
     },
 ];
 
