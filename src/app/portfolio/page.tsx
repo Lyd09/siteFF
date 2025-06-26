@@ -1,6 +1,8 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import Image from 'next/image';
+import Link from 'next/link';
+import { PlayCircle } from 'lucide-react';
 
 export const metadata = {
   title: 'Portfólio | FastFilms',
@@ -8,10 +10,30 @@ export const metadata = {
 };
 
 const portfolioProjects = [
-    { title: 'Curta-Metragem "Amanhecer"', description: 'Uma história emocionante sobre recomeços.', imageUrl: 'https://placehold.co/600x400', dataAiHint: 'short film emotional' },
-    { title: 'Videoclipe "Noites de Verão"', description: 'Clipe vibrante para a banda Sol Poente.', imageUrl: 'https://placehold.co/600x400', dataAiHint: 'music video summer' },
-    { title: 'Comercial TechCorp', description: 'Vídeo de lançamento para o novo smartphone da TechCorp.', imageUrl: 'https://placehold.co/600x400', dataAiHint: 'corporate commercial tech' },
-    { title: 'Vídeo Institucional "Nossa História"', description: 'Documentário celebrando os 50 anos da empresa ABC.', imageUrl: 'https://placehold.co/600x400', dataAiHint: 'documentary history' },
+    {
+        title: 'DIA DE/GRAVAÇÃO/CONDOMÍNIO ESTÂNCIA DAS AMENDOEIRAS',
+        imageUrl: '/Portfolio/GRAVAÇÃO.png',
+        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
+        dataAiHint: 'real estate recording',
+    },
+    {
+        title: 'GRAVAÇÃO DE UMA CASA DE/R$15.000.000,00/CONDOMÍNIO ESTÂNCIAS DAS AMENDOEIRAS',
+        imageUrl: '/Portfolio/IMOBILIÁRIO.png',
+        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
+        dataAiHint: 'luxury real estate',
+    },
+    {
+        title: 'GRAVAÇÃO NO MERCADO /IMOBBILIÁRIO/CONDOMÍNIO RETIRO DAS ÁGUAS',
+        imageUrl: '/Portfolio/CASA%2015M.png',
+        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
+        dataAiHint: 'real estate market video',
+    },
+    {
+        title: 'ONDE O TEMPO/RESPIRA /FAZENDA DO MOINHO • HECTARES PREMIUM',
+        imageUrl: '/Portfolio/RESPIRA.png',
+        videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
+        dataAiHint: 'farm lifestyle video',
+    },
 ];
 
 export default function PortfolioPage() {
@@ -21,19 +43,34 @@ export default function PortfolioPage() {
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         Aqui estão alguns dos projetos que tivemos o prazer de produzir. Cada vídeo é uma história que ajudamos a contar.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
         {portfolioProjects.map((project, index) => (
-          <Card key={index} className="overflow-hidden transition-shadow group">
-            <div className="relative h-64 w-full">
-                <Image src={project.imageUrl} alt={project.title} fill className="rounded-t-lg object-cover transition-transform group-hover:scale-105" data-ai-hint={project.dataAiHint}/>
-            </div>
-            <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">{project.description}</p>
-            </CardContent>
-          </Card>
+          <Link key={index} href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="block group">
+            <Card className="overflow-hidden relative aspect-[9/16] rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300">
+              <Image 
+                src={project.imageUrl} 
+                alt={project.title.replaceAll('/', ' ')} 
+                fill 
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                data-ai-hint={project.dataAiHint}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <PlayCircle className="w-20 h-20 text-white/80" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                    <h2 className="text-white font-headline text-xl lg:text-2xl leading-tight drop-shadow-lg">
+                    {project.title.split('/').map((line, i) => (
+                        <span key={i} className="block">
+                        {line.trim()}
+                        </span>
+                    ))}
+                    </h2>
+                </div>
+              </div>
+            </Card>
+          </Link>
         ))}
       </div>
     </>
