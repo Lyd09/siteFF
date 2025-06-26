@@ -123,7 +123,7 @@ export default function EquipamentosPage() {
             </CardHeader>
             <CardContent>
               {setup.imageUrl && (
-                <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden mb-6 shadow-md">
+                <div className="relative w-full h-48 rounded-lg overflow-hidden mb-6 shadow-md">
                   <Image
                     src={setup.imageUrl}
                     alt={`Imagem do ${setup.title}`}
@@ -177,7 +177,7 @@ export default function EquipamentosPage() {
             <CardContent>
               {category.items.map((item) => (
                 <div key={item.name}>
-                  <div className="relative w-full rounded-lg overflow-hidden mb-4 shadow-md aspect-[4/3]">
+                  <div className="relative w-full rounded-lg overflow-hidden mb-4 shadow-md h-44">
                     <Image
                       src={item.imageUrl}
                       alt={`Imagem para ${item.name}`}
