@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'FastFilms Portfolio',
   description: 'Portfolio website for FastFilms video production company.',
   icons: {
-    icon: '/FF-COM-FUNDO-CINZA.svg',
+    icon: '/FF CROP SVG.svg',
   },
 };
 
