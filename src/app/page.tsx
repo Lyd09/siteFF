@@ -81,7 +81,7 @@ export default function Home() {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                <AlertDialogAction onClick={() => window.open('https://gestao-de-clientes-ff.netlify.app/', '_blank', 'noopener,noreferrer')}>
+                <AlertDialogAction onClick={() => window.open('https://projetex.netlify.app/login', '_blank', 'noopener,noreferrer')}>
                   Continuar
                 </AlertDialogAction>
               </AlertDialogFooter>
