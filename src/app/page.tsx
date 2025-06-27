@@ -45,7 +45,7 @@ export default function Home() {
   const equipment = [
     {
       icon: <Video />,
-      description: 'Equipamentos',
+      description: 'Nossos Equipamentos',
       imageUrl: '/EQUIPAMENTOS.svg',
       imageAlt: 'Ilustração de equipamentos',
       dataAiHint: 'video camera',
