@@ -45,7 +45,7 @@ export default function Home() {
   const equipment = [
     {
       icon: <Video />,
-      description: 'Nossos Equipamentos',
+      description: 'Equipamentos',
       imageUrl: '/EQUIPAMENTOS.svg',
       imageAlt: 'Ilustração de equipamentos',
       dataAiHint: 'video camera',
@@ -54,38 +54,40 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 page-grid grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-start">
-      <aside className="w-full md:sticky md:top-12 flex flex-col items-start z-20">
+      <aside className="w-full md:sticky md:top-12 flex flex-col items-center md:items-start z-20">
         <div className="self-center md:self-start">
           <LogoBox />
         </div>
-        <div className="contact-info-wrapper mt-16 mb-8 w-full">
+        <div className="contact-info-wrapper mt-16 mb-8 w-full flex justify-center md:justify-start">
           <ContactInfo />
         </div>
         
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
-            <button className="learn-more-button">
-              <span className="circle" aria-hidden="true">
-                <span className="icon user-lock-icon"></span>
-              </span>
-              <span className="button-text">Só pra quem joga junto</span>
-            </button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Acesso Restrito</AlertDialogTitle>
-              <AlertDialogDescription>
-                Esta área é exclusiva para os parceiros e colaboradores da FastFilms e o acesso requer login e senha. Se você já tem suas credenciais, clique em 'Continuar'. Novos colaboradores devem solicitar o seu acesso.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancelar</AlertDialogCancel>
-              <AlertDialogAction onClick={() => window.open('https://gestao-de-clientes-ff.netlify.app/', '_blank', 'noopener,noreferrer')}>
-                Continuar
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        <div className="w-full flex justify-center md:justify-start">
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button className="learn-more-button">
+                <span className="circle" aria-hidden="true">
+                  <span className="icon user-lock-icon"></span>
+                </span>
+                <span className="button-text">Só pra quem joga junto</span>
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Acesso Restrito</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Esta área é exclusiva para os parceiros e colaboradores da FastFilms e o acesso requer login e senha. Se você já tem suas credenciais, clique em 'Continuar'. Novos colaboradores devem solicitar o seu acesso.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                <AlertDialogAction onClick={() => window.open('https://gestao-de-clientes-ff.netlify.app/', '_blank', 'noopener,noreferrer')}>
+                  Continuar
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
 
       </aside>
 
@@ -113,7 +115,7 @@ export default function Home() {
         </section>
 
         <section aria-labelledby="equip-title" className="w-full max-w-2xl mx-auto md:mx-0">
-          <SectionTitle id="equip-title">Os brinquedos de gente grande</SectionTitle>
+          <SectionTitle id="equip-title">Aqui, até a criação faz overclock</SectionTitle>
           <div className="space-y-6">
             {equipment.map((item, index) => (
               <Link href="/equipamentos" key={`equipment-link-${index}`} className="block transition-transform hover:scale-[1.02]">
