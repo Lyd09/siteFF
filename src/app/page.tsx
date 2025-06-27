@@ -115,7 +115,7 @@ export default function Home() {
         </section>
 
         <section aria-labelledby="equip-title" className="w-full max-w-2xl mx-auto md:mx-0">
-          <SectionTitle id="equip-title">Aqui, até a criação faz overclock</SectionTitle>
+          <SectionTitle id="equip-title">Aqui, o setup não chia — ele ruge</SectionTitle>
           <div className="space-y-6">
             {equipment.map((item, index) => (
               <Link href="/equipamentos" key={`equipment-link-${index}`} className="block transition-transform hover:scale-[1.02]">
