@@ -34,6 +34,12 @@ const portfolioProjects = [
         videoUrl: 'https://www.instagram.com/_fastfilms_/reel/DGGx-zExFu4/',
         dataAiHint: 'real estate recording',
     },
+    {
+        title: 'Vídeo institucional sobre investimentos',
+        imageUrl: '/Portfolio/INVESTIMENTO.png',
+        videoUrl: 'https://www.instagram.com/reel/DLaHI3LuUg7/?utm_source=ig_web_copy_link&igsh=MXdqazN3cmpnejVxMA==',
+        dataAiHint: 'investment video',
+    },
 ];
 
 export default function PortfolioPage() {
