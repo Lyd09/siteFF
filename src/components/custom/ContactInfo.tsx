@@ -5,7 +5,7 @@ const ContactInfo: React.FC = () => {
     <div className="social-icon-card" aria-label="Contato FastFilms">
       <div className="social-link-container">
         <a
-          href="https://wa.me/5531998889797?text=Ol%C3%A1!%20Encontrei%20o%20site%20de%20voc%C3%AAs%20e%20queria%20tirar%20umas%20d%C3%BAvidas%20e%20pedir%20um%20or%C3%A7amento."
+          href="https://wa.me/553172208560?text=Ol%C3%A1!%20Encontrei%20o%20site%20de%20voc%C3%AAs%20e%20queria%20tirar%20umas%20d%C3%BAvidas%20e%20pedir%20um%20or%C3%A7amento."
           className="socialContainer containerFour"
           target="_blank"
           rel="noopener noreferrer"
