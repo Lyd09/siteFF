@@ -25,17 +25,18 @@ export default function ClientesPage() {
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
         {clients.map((client) => (
-          <Card key={client.name} className="flex flex-col items-center p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
-            <div className="relative w-full flex-1">
+          <Card key={client.name} className="grid grid-rows-[2fr_1fr] items-center p-4 md:p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
+            <div className="relative w-full h-full">
               <Image
                 src={client.logo}
                 alt={`Logo ${client.name}`}
                 fill
-                className="object-contain p-1"
+                className="object-contain"
                 data-ai-hint="client logo"
+                sizes="(max-width: 768px) 40vw, 25vw"
               />
             </div>
-            <div className="flex-shrink-0 mt-4 text-center">
+            <div className="text-center self-end">
               <p className="font-semibold text-card-foreground">{client.name}</p>
               {client.location && (
                 <p className="text-xs text-muted-foreground">{client.location}</p>
