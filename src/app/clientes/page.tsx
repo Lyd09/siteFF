@@ -8,12 +8,12 @@ export const metadata = {
 };
 
 const clients = [
-  { name: 'Balcão 360', logo: '/clientes-logos/Balcão360.svg', location: 'Youtube/Spotfy' },
-  { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda do Moinho.svg', location: 'Pedro Leopoldo' },
+  { name: 'Balcão 360', logo: '/clientes-logos/Balcao360.svg', location: 'Youtube/Spotfy' },
+  { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda-do-Moinho.svg', location: 'Pedro Leopoldo' },
   { name: 'Laiite', logo: '/clientes-logos/Laiite.svg', location: 'Pedro Leopoldo' },
-  { name: 'My Broker', logo: '/clientes-logos/My Broker.svg', location: 'Lagoa Santa' },
+  { name: 'My Broker', logo: '/clientes-logos/My-Broker.svg', location: 'Lagoa Santa' },
   { name: 'RHLA Incoporadora', logo: '/clientes-logos/RHLA.svg', location: 'Lagoa Santa' },
-  { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares Gontijo.svg', location: 'Contagem' },
+  { name: 'Valadares Gontijo', logo: '/clientes-logos/Valadares-Gontijo.svg', location: 'Contagem' },
 ];
 
 export default function ClientesPage() {
@@ -25,17 +25,17 @@ export default function ClientesPage() {
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
         {clients.map((client) => (
-          <Card key={client.name} className="flex flex-col items-center justify-center p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
+          <Card key={client.name} className="flex flex-col items-center p-6 bg-card hover:bg-muted/50 transition-colors duration-300 aspect-[3/2]">
             <div className="relative w-full flex-1">
               <Image
                 src={client.logo}
                 alt={`Logo ${client.name}`}
                 fill
-                className="object-contain"
+                className="object-contain p-1"
                 data-ai-hint="client logo"
               />
             </div>
-            <div className="mt-4 text-center">
+            <div className="flex-shrink-0 mt-4 text-center">
               <p className="font-semibold text-card-foreground">{client.name}</p>
               {client.location && (
                 <p className="text-xs text-muted-foreground">{client.location}</p>
