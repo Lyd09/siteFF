@@ -9,6 +9,7 @@ export const metadata = {
 
 const clients = [
   { name: 'Balcão 360', logo: '/clientes-logos/Balcao360.svg', location: 'Youtube/Spotfy' },
+  { name: 'CFPL - CrossFit Pedro Leopoldo', logo: '/clientes-logos/CFPL.svg', location: 'Pedro Leopoldo' },
   { name: 'Fazenda do Moinho', logo: '/clientes-logos/Fazenda-do-Moinho.svg', location: 'Pedro Leopoldo' },
   { name: 'Laiite', logo: '/clientes-logos/Laiite.svg', location: 'Pedro Leopoldo' },
   { name: 'My Broker', logo: '/clientes-logos/My-Broker.svg', location: 'Lagoa Santa' },
