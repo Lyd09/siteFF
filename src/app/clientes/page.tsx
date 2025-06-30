@@ -1,11 +1,17 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
-
-export const metadata = {
-  title: 'Clientes | FastFilms',
-  description: 'Veja quem confia em nosso trabalho.',
-};
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 
 const clients = [
   { name: 'Balcão 360', logo: '/clientes-logos/Balcao360.svg', location: 'Youtube/Spotfy' },
@@ -18,8 +24,28 @@ const clients = [
 ];
 
 export default function ClientesPage() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setIsDialogOpen(true);
+  }, []);
+
   return (
     <>
+      <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Aviso</AlertDialogTitle>
+            <AlertDialogDescription>
+              Em breve!
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction>Fechar</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">Nossos Clientes</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         Criar junto é como pegar a estrada: precisa confiança, troca e uma boa trilha sonora. Essas marcas vieram no banco da frente.
