@@ -107,8 +107,11 @@ export default function Home() {
           <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
           <div className="space-y-6 opacity-50 pointer-events-none">
             {clients.map((item, index) => (
-              <div key={`client-link-${index}`} className="block">
+              <div key={`client-link-${index}`} className="block relative">
                 <PortfolioCard {...item} />
+                <div className="absolute inset-0 bg-background/60 flex items-center justify-center rounded-lg">
+                  <span className="text-foreground font-bold text-lg tracking-wider uppercase border-2 border-foreground/50 rounded-md px-4 py-2">Em Breve</span>
+                </div>
               </div>
             ))}
           </div>
