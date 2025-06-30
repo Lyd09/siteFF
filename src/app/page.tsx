@@ -105,11 +105,11 @@ export default function Home() {
 
         <section aria-labelledby="client-title" className="w-full max-w-2xl mx-auto md:mx-0">
           <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
-          <div className="space-y-6">
+          <div className="space-y-6 opacity-50 pointer-events-none">
             {clients.map((item, index) => (
-              <Link href="/clientes" key={`client-link-${index}`} className="block transition-transform hover:scale-[1.02]">
+              <div key={`client-link-${index}`} className="block">
                 <PortfolioCard {...item} />
-              </Link>
+              </div>
             ))}
           </div>
         </section>
