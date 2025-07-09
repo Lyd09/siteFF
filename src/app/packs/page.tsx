@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, Zap, Clock, Star } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { useCart } from '@/context/CartContext';
+import { useToast } from '@/hooks/use-toast';
 
 const features = [
   {
@@ -27,6 +29,7 @@ const features = [
 
 const editionPacks = [
   {
+    id: 'pack-transicoes',
     title: 'Pack de Transições Cinematográficas',
     description: '100 transições suaves para dar um toque profissional aos seus vídeos.',
     price: 'R$ 49,90',
@@ -34,6 +37,7 @@ const editionPacks = [
     dataAiHint: 'video transitions',
   },
   {
+    id: 'colecao-trilhas',
     title: 'Coleção de Trilhas Sonoras Épicas',
     description: 'Músicas livres de royalties para criar a atmosfera perfeita.',
     price: 'R$ 79,90',
@@ -41,6 +45,7 @@ const editionPacks = [
     dataAiHint: 'music production',
   },
   {
+    id: 'pacote-efeitos',
     title: 'Pacote de Efeitos Sonoros Essenciais',
     description: 'De "whooshes" a "dings", tudo que você precisa para sound design.',
     price: 'R$ 39,90',
@@ -50,6 +55,17 @@ const editionPacks = [
 ];
 
 export default function PacksPage() {
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = (pack: (typeof editionPacks)[0]) => {
+    addToCart(pack);
+    toast({
+      title: 'Item Adicionado!',
+      description: `${pack.title} foi adicionado ao seu carrinho.`,
+    });
+  };
+
   return (
     <>
       <div className="text-center">
@@ -104,7 +120,7 @@ export default function PacksPage() {
             </CardContent>
             <CardFooter className="p-6 pt-0 flex justify-between items-center">
               <p className="text-lg font-bold text-primary">{pack.price}</p>
-              <Button>
+              <Button onClick={() => handleAddToCart(pack)}>
                 <ShoppingCart className="mr-2 h-4 w-4" />
                 Comprar
               </Button>
