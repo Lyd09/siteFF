@@ -56,7 +56,7 @@ export default function Home() {
     {
       icon: <Package />,
       description: 'Packs para Edição',
-      imageUrl: 'https://placehold.co/600x400.png',
+      imageUrl: '/packs.png',
       imageAlt: 'Ilustração de packs de edição',
       dataAiHint: 'digital products',
     },
