@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Users, Video } from 'lucide-react';
+import { Users, Video, Package } from 'lucide-react';
 import LogoBox from '@/components/custom/LogoBox';
 import ContactInfo from '@/components/custom/ContactInfo';
 import PortfolioCard from '@/components/custom/PortfolioCard';
@@ -49,6 +49,16 @@ export default function Home() {
       imageUrl: '/EQUIPAMENTOS.svg',
       imageAlt: 'Ilustração de equipamentos',
       dataAiHint: 'video camera',
+    },
+  ];
+
+  const packs = [
+    {
+      icon: <Package />,
+      description: 'Packs para Edição',
+      imageUrl: 'https://placehold.co/600x400.png',
+      imageAlt: 'Ilustração de packs de edição',
+      dataAiHint: 'digital products',
     },
   ];
 
@@ -122,6 +132,17 @@ export default function Home() {
           <div className="space-y-6">
             {equipment.map((item, index) => (
               <Link href="/equipamentos" key={`equipment-link-${index}`} className="block transition-transform hover:scale-[1.02]">
+                <PortfolioCard {...item} />
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="packs-title" className="w-full max-w-2xl mx-auto md:mx-0">
+          <SectionTitle id="packs-title">Otimize sua criação</SectionTitle>
+          <div className="space-y-6">
+            {packs.map((item, index) => (
+              <Link href="/packs" key={`pack-link-${index}`} className="block transition-transform hover:scale-[1.02]">
                 <PortfolioCard {...item} />
               </Link>
             ))}
