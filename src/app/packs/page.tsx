@@ -8,6 +8,7 @@ import { ShoppingCart, Zap, Clock, Star } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { useCart } from '@/context/CartContext';
 import { useToast } from '@/hooks/use-toast';
+import { ToastAction } from '@/components/ui/toast';
 
 const features = [
   {
@@ -32,7 +33,7 @@ const editionPacks = [
     id: 'pack-transicoes',
     title: 'Pack de Transições Cinematográficas',
     description: '100 transições suaves para dar um toque profissional aos seus vídeos.',
-    price: 'R$ 49,90',
+    price: 'R$ 19,90',
     imageUrl: '/Packs/Transitions.svg',
     dataAiHint: 'video transitions',
   },
@@ -40,7 +41,7 @@ const editionPacks = [
     id: 'colecao-trilhas',
     title: 'Coleção de Trilhas Sonoras Épicas',
     description: 'Músicas livres de royalties para criar a atmosfera perfeita.',
-    price: 'R$ 79,90',
+    price: 'R$ 19,90',
     imageUrl: '/Packs/Soundtracks.svg',
     dataAiHint: 'music production',
   },
@@ -48,22 +49,70 @@ const editionPacks = [
     id: 'pacote-efeitos',
     title: 'Pacote de Efeitos Sonoros Essenciais',
     description: 'De "whooshes" a "dings", tudo que você precisa para sound design.',
-    price: 'R$ 39,90',
+    price: 'R$ 19,90',
     imageUrl: '/Packs/SoundEffects.svg',
     dataAiHint: 'sound effects',
   },
 ];
 
+const upsellMap: { [key: string]: (typeof editionPacks[0]) } = {
+  'pack-transicoes': editionPacks[1], // offer soundtracks
+  'colecao-trilhas': editionPacks[2], // offer sound effects
+  'pacote-efeitos': editionPacks[0], // offer transitions
+};
+
 export default function PacksPage() {
-  const { addToCart } = useCart();
+  const { addToCart, cartItems } = useCart();
   const { toast } = useToast();
+
+  const handleUpsellAddToCart = (pack: (typeof editionPacks)[0]) => {
+    const discountedPack = {
+      ...pack,
+      id: `${pack.id}-oferta`,
+      title: `${pack.title} (Oferta)`,
+      price: 'R$ 9,90',
+    };
+    addToCart(discountedPack);
+    toast({
+      title: 'Oferta Adicionada!',
+      description: `${discountedPack.title} foi adicionado ao seu carrinho.`,
+    });
+  };
 
   const handleAddToCart = (pack: (typeof editionPacks)[0]) => {
     addToCart(pack);
-    toast({
-      title: 'Item Adicionado!',
-      description: `${pack.title} foi adicionado ao seu carrinho.`,
-    });
+
+    const upsellPack = upsellMap[pack.id];
+    if (!upsellPack) {
+      toast({
+        title: 'Item Adicionado!',
+        description: `${pack.title} foi adicionado ao seu carrinho.`,
+      });
+      return;
+    };
+    
+    const isUpsellPackInCart = cartItems.some(item => item.id === upsellPack.id || item.id === `${upsellPack.id}-oferta`);
+    
+    if (isUpsellPackInCart) {
+        toast({
+            title: 'Item Adicionado!',
+            description: `${pack.title} foi adicionado ao seu carrinho.`,
+        });
+    } else {
+        toast({
+            title: '🎉 Oferta Especial Para Você!',
+            description: `Aproveite e leve também: ${upsellPack.title} por apenas R$ 9,90!`,
+            duration: 10000,
+            action: (
+            <ToastAction
+                altText={`Adicionar ${upsellPack.title} por R$ 9,90`}
+                onClick={() => handleUpsellAddToCart(upsellPack)}
+            >
+                Adicionar por R$ 9,90
+            </ToastAction>
+            ),
+        });
+    }
   };
 
   return (
