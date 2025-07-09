@@ -56,7 +56,7 @@ export default function Home() {
     {
       icon: <Package />,
       description: 'Packs para Edição',
-      imageUrl: '/packs.png',
+      imageUrl: '/PACKS.svg',
       imageAlt: 'Ilustração de packs de edição',
       dataAiHint: 'digital products',
     },
