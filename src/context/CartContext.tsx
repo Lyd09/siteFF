@@ -13,6 +13,9 @@ export interface CartItem {
 interface CartContextType {
   cartItems: CartItem[];
   addToCart: (item: Omit<CartItem, 'quantity'>) => void;
+  increaseQuantity: (itemId: string) => void;
+  decreaseQuantity: (itemId: string) => void;
+  removeFromCart: (itemId: string) => void;
   itemCount: number;
   subtotal: number;
 }
@@ -40,6 +43,29 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
+  const increaseQuantity = (itemId: string) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decreaseQuantity = (itemId: string) => {
+    setCartItems((prevItems) =>
+      prevItems
+        .map((item) =>
+          item.id === itemId ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
+  const removeFromCart = (itemId: string) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  };
+
+
   const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const subtotal = useMemo(() => {
@@ -50,7 +76,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   }, [cartItems]);
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, itemCount, subtotal }}>
+    <CartContext.Provider value={{ cartItems, addToCart, increaseQuantity, decreaseQuantity, removeFromCart, itemCount, subtotal }}>
       {children}
     </CartContext.Provider>
   );

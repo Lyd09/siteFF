@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Trash2, Plus, Minus } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -18,7 +18,7 @@ import { useCart } from '@/context/CartContext';
 import { Separator } from '../ui/separator';
 
 const CartDisplay = () => {
-  const { cartItems, itemCount, subtotal } = useCart();
+  const { cartItems, itemCount, subtotal, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -47,7 +47,7 @@ const CartDisplay = () => {
           <>
             <div className="flex-grow overflow-y-auto -mr-6 pr-6 mt-4">
               {cartItems.map((item) => (
-                <div key={item.id} className="flex items-center gap-4 py-4">
+                <div key={item.id} className="flex items-start gap-4 py-4">
                   <Image
                     src={item.imageUrl}
                     alt={item.title}
@@ -60,8 +60,19 @@ const CartDisplay = () => {
                     <p className="text-sm text-muted-foreground">
                       {item.price}
                     </p>
+                    <div className="flex items-center gap-2 mt-2">
+                        <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => decreaseQuantity(item.id)}>
+                            <Minus className="h-3 w-3" />
+                        </Button>
+                        <span className="text-sm font-medium w-4 text-center">{item.quantity}</span>
+                        <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => increaseQuantity(item.id)}>
+                            <Plus className="h-3 w-3" />
+                        </Button>
+                    </div>
                   </div>
-                  <p className="font-semibold">x{item.quantity}</p>
+                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive shrink-0" onClick={() => removeFromCart(item.id)}>
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
                 </div>
               ))}
             </div>
