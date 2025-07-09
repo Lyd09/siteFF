@@ -113,20 +113,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section aria-labelledby="client-title" className="w-full max-w-2xl mx-auto md:mx-0">
-          <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
-          <div className="space-y-6 opacity-50 pointer-events-none">
-            {clients.map((item, index) => (
-              <div key={`client-link-${index}`} className="block relative">
-                <PortfolioCard {...item} />
-                <div className="absolute inset-0 bg-background/60 flex items-center justify-center rounded-lg">
-                  <span className="text-foreground font-bold text-lg tracking-wider uppercase border-2 border-foreground/50 rounded-md px-4 py-2">Em Breve</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section aria-labelledby="equip-title" className="w-full max-w-2xl mx-auto md:mx-0">
           <SectionTitle id="equip-title">Aqui, o setup não chia — ele ruge</SectionTitle>
           <div className="space-y-6">
@@ -145,6 +131,20 @@ export default function Home() {
               <Link href="/packs" key={`pack-link-${index}`} className="block transition-transform hover:scale-[1.02]">
                 <PortfolioCard {...item} />
               </Link>
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="client-title" className="w-full max-w-2xl mx-auto md:mx-0">
+          <SectionTitle id="client-title">Gente boa que já contou com a gente</SectionTitle>
+          <div className="space-y-6 opacity-50 pointer-events-none">
+            {clients.map((item, index) => (
+              <div key={`client-link-${index}`} className="block relative">
+                <PortfolioCard {...item} />
+                <div className="absolute inset-0 bg-background/60 flex items-center justify-center rounded-lg">
+                  <span className="text-foreground font-bold text-lg tracking-wider uppercase border-2 border-foreground/50 rounded-md px-4 py-2">Em Breve</span>
+                </div>
+              </div>
             ))}
           </div>
         </section>
