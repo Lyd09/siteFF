@@ -19,12 +19,9 @@ const SimpleHeader = ({ showCart = false }: { showCart?: boolean }) => {
           <div className="shine">FastFilms</div>
         </Link>
         {showCart && (
-          <div className="flex items-center gap-4">
-            <Button>Continuar Compra</Button>
-            <Button variant="ghost" size="icon" aria-label="Carrinho de Compras">
-                <ShoppingCart className="h-6 w-6" />
-            </Button>
-          </div>
+          <Button variant="ghost" size="icon" aria-label="Carrinho de Compras">
+              <ShoppingCart className="h-6 w-6" />
+          </Button>
         )}
       </div>
     </header>
