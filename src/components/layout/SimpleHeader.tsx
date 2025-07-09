@@ -18,7 +18,7 @@ import { useCart } from '@/context/CartContext';
 import { Separator } from '../ui/separator';
 
 const CartDisplay = () => {
-  const { cartItems, itemCount } = useCart();
+  const { cartItems, itemCount, subtotal } = useCart();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -66,7 +66,16 @@ const CartDisplay = () => {
               ))}
             </div>
             <Separator className="my-4" />
-            <SheetFooter>
+            <div className="flex justify-between items-center text-lg font-semibold px-1">
+              <span>Subtotal</span>
+              <span>
+                {subtotal.toLocaleString('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL',
+                })}
+              </span>
+            </div>
+            <SheetFooter className="mt-4">
               <Button className="w-full">Continuar Compra</Button>
             </SheetFooter>
           </>

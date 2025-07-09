@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useMemo } from 'react';
 
 export interface CartItem {
   id: string;
@@ -14,9 +14,14 @@ interface CartContextType {
   cartItems: CartItem[];
   addToCart: (item: Omit<CartItem, 'quantity'>) => void;
   itemCount: number;
+  subtotal: number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
+
+const parsePrice = (price: string): number => {
+    return parseFloat(price.replace('R$', '').trim().replace('.', '').replace(',', '.'));
+};
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -37,8 +42,15 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
+  const subtotal = useMemo(() => {
+    return cartItems.reduce((total, item) => {
+      const price = parsePrice(item.price);
+      return total + price * item.quantity;
+    }, 0);
+  }, [cartItems]);
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, itemCount }}>
+    <CartContext.Provider value={{ cartItems, addToCart, itemCount, subtotal }}>
       {children}
     </CartContext.Provider>
   );
